@@ -1,5 +1,5 @@
 module.exports = {
-    files: ['build/boilerplate.css'],
+    files: ['build/style.css'],
     server: {
         baseDir: "build"
     },
