@@ -6,10 +6,11 @@
   "license": "MIT",
   "scripts": {
     "prestart": "npm run build",
-    "start": "npm-run-all -p watch server",
+    "start": "npm-run-all -p watch minify server",
     "build": "npm-run-all scss autoprefixer",
     "scss": "node-sass scss/style.scss build/style.css --output-style expanded --indent-width 4 --source-map build/",
     "autoprefixer": "postcss --use autoprefixer -r build/style.css",
+    "minify": "cleancss -c ie11 -f 'breaks:afterComment=on' -d -o build/style.css build/style.css",
     "server": "browser-sync start -c bs-config.js",
     "watch": "chokidar \"scss/\" -c \"npm run build\""
   },
@@ -17,6 +18,7 @@
     "autoprefixer": "^7.1.4",
     "browser-sync": "^2.18.13",
     "chokidar-cli": "^1.2.0",
+    "clean-css-cli": "^4.2.1",
     "node-sass": "^4.5.3",
     "normalize.css": "^7.0.0",
     "npm-run-all": "^4.1.1",
