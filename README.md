@@ -1,3 +1,6 @@
+[@rokuzeudon](https://github.com/rokuzeudon)の個人ブログ用テーマです。
+株式会社はてな様のデザインテーマ[Hatena-Blog-Theme-Boilerplate](https://github.com/hatena/Hatena-Blog-Theme-Boilerplate)をベースにしています。
+
 # Requirements
 
 - [Node.js](https://nodejs.org/)

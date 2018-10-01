@@ -1,9 +1,9 @@
 {
-  "name": "hatena-blog-theme-boilerplate",
-  "version": "2.0.0",
-  "description": "Boilerplate for Hatena Blog theme",
-  "author": "Hatena Blog",
-  "license": "MIT",
+  "name": "rokuzeudon",
+  "version": "1.0.0",
+  "description": "blog.rokuzeudon.com",
+  "author": "rokuzeudon",
+  "license": "creativecommons.org/licenses/by/2.1/jp/legalcode",
   "scripts": {
     "prestart": "npm run build",
     "start": "npm-run-all -p watch server",
