@@ -15,6 +15,14 @@
 
 // import variable
 @import "lib/_variable";
+@import "lib/_order";
 
 // import core
 @import "lib/_core";
+
+// import pages
+@import "lib/_page-archive";
+@import "lib/_page-entry";
+
+// import mq
+@import "lib/_media-queries";
