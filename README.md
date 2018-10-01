@@ -1,81 +1,43 @@
-# Hatena-Blog-Theme-Boilerplate
-
-Boilerplate は、はてなブログのデザインCSSカスタマイズの土台に適したデザインテーマです。
-
-はてなブログの必要最小限の見た目が調整されています。このテーマをもとにしてCSSを書くと比較的楽にデザインテーマが作れます。
-「オリジナルテーマの制作にチャレンジしたいけど、0から作るのが大変」という方は、このデザインテーマをもとにしてCSSを書くと比較的楽にテーマが作れます。
-
-*Boilerplateは自己責任でご利用ください。お問い合わせははてなブログのサポートフォームではなく、本リポジトリのIssueにお願いします。*
-
-# CSSのダウンロード
-
-最新のバージョンから `boilerplate.css` をダウンロードしてください。
-
-- <https://github.com/hatena/Hatena-Blog-Theme-Boilerplate/releases>
-
-# セットアップ
-
-SCSSで開発する場合は、下記の手順でリポジトリのcloneとモジュールのインストールを行います。
-
-## Required Component
+# Requirements
 
 - [Node.js](https://nodejs.org/)
 
-## モジュールのインストール
+# Installation
 
 ```
-$ git clone git@github.com:hatena/Hatena-Blog-Theme-Boilerplate.git
-$ cd Hatena-Blog-Theme-Boilerplate
+$ git clone git@github.com:rokuzeudon/blog.rokuzeudon.com.git
+$ cd blog.rokuzeudon.com
 $ npm install
 ```
 
-# 通常のテーマ開発
+# Usage
 
-下記のコマンドで、SCSSファイル変更の監視とコンパイルを行います。
+`$ npm start`
 
-```
-$ npm start
-```
+## Optional
 
-また、コンパイル後 `build/boilerplate.css` が作られます。
-
-つづいて、[はてなブログ](https://blog.hatena.ne.jp/)の設定を行います。
-
-1. テーマ検証に使うブログを1つ用意します。
-1. 1.で作成したブログの「デザイン設定」にアクセスし、「カスタマイズ」タブの「デザインCSS」の内容を下記に置き換えて保存します。
-
-```
-@import url("http://localhost:3000/boilerplate.css");
-```
-
-※ Browsersync のブラウザ自動リロードはサポートしていません。
-
-## （オプション）レスポンシブデザインのテーマ開発
-
-レスポンシブデザインのテーマを開発する場合、ブログの「デザイン設定」->「カスタマイズ」にアクセスし、「デザインCSS」欄の先頭に下記のコメントを挿入してください。
+テーマ検証に使う[はてなブログ](https://blog.hatena.ne.jp/)を用意し、
+`デザイン設定 > カスタマイズ > デザインCSS` に下記を保存します。
 
 ```
 /* Responsive: yes */
+@import url("http://localhost:3000/style.css");
 ```
 
-ヘルプ: [レスポンシブデザインのテーマを作成する際の注意点 - はてなブログ ヘルプ](http://help.hatenablog.com/entry/theme/custom-theme#responsive)
+npm実行中、出力した`style.css`が検証用ブログに反映されるようになります。
 
-# 構成
+# Structure
 
 ```
-boilerplate/
+blog.rokuzeudon.com/
 ┣┳ scss/
 ┃┗┳ lib/
-┃ ┗ boilerplate.scss
+┃ ┗ style.scss
 ┗┳ build/
- ┗ boilerplate.css
+ ┗ style.css
 ```
 
-# ライセンス
+# License
 
-このCSSおよびSCSSファイルはMITライセンスのもと自由に複製・再配布できます。 記事本文の書式やコメント欄のスタイルなど、必要な部分だけをコピーして使ってもかまいません。 このデザインテーマをもとにしたテーマの配布も自由です。
-
-# 過去のバージョン
-
-- <https://github.com/hatena/Hatena-Blog-Theme-Boilerplate-Less>
-  - BoilerplateのLessバージョンです。（開発終了）
+Released under the CC BY 2.1 JP License.  
+[クリエイティブ・コモンズ　リーガル・コード](https://creativecommons.org/licenses/by/2.1/jp/legalcode)
