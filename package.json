@@ -8,7 +8,7 @@
     "prestart": "npm run build",
     "start": "npm-run-all -p watch server",
     "build": "npm-run-all scss autoprefixer",
-    "scss": "node-sass scss/style.scss > build/style.css --output-style compressed --indent-width 2c",
+    "scss": "node-sass scss/style.scss build/style.css --output-style compressed --indent-width 2c",
     "autoprefixer": "postcss --use autoprefixer -r build/style.css",
     "watch": "chokidar \"scss/\" -c \"npm run build\"",
     "server": "browser-sync start -c bs-config.js"
