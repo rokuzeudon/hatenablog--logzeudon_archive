@@ -1,0 +1,34 @@
+// .entry-header
+.date{order: 2;}
+.entry-title{order: 1;}
+.categories{order: 3;}
+.customized-header{order: 4;}
+
+// .entry-inner
+.entry-header{order: 2;}
+.entry-content{order: 1;}
+.entry-footer{order: 3;}
+.page-entry{
+  .entry-header{order: 1;}
+  .entry-content{order: 2;}
+}
+
+////////// z-index
+
+// メニュー
+.menuButton{z-index: 1000;}
+#global-nav{z-index: 999;}
+#nav-bg{z-index: 998;}
+
+// 編集
+.entry-header-menu{z-index: 997;}
+
+// 続きを読む
+.entry-see-more{z-index: 996;}
+
+// 詳細ページ
+.page-entry{
+  .entry-header-html .share{z-index: 3;}
+  .hatena-asin-detail > a, .hatena-asin-detail > div{z-index: 2;}
+  .hatena-asin-detail::before{z-index: 1;}
+}

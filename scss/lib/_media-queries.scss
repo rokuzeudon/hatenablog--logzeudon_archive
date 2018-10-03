@@ -1,0 +1,152 @@
+/* Media Queries - Large Display PC */
+@media #{$mq-xl} {
+  #nav-bg{
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-top: -100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    transform: scale(1);
+    opacity: 0;
+  }
+  .open #nav-bg{
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@media #{$mq-lg} {
+  body{
+    font-size: 120%;
+  }
+  .page-entry .entry-content {
+    line-height: 2.2;
+  }
+}
+
+/* Media Queries - Smartphone Landscape */
+@media #{$mq-smmax} {
+  /* nav */ //もともとmax480pxに入れていたが、スマホ横向き表示でなぜかクラッシュしたので分離
+  #nav-bg {
+    width: 2000px;
+    height: 2000px;
+    margin-left: -1000px;
+    margin-top: -1000px;
+    top: 32px;
+    left: 32px;
+  }
+  .menuButton {
+    height: 2.6em;
+    width: 2.6em;
+    margin: .655em;
+    svg{
+      position: absolute;
+      top: 5px;
+      left: 7px;
+      width: 1.8em;
+    }
+  }
+  #global-nav a{
+    padding: 0 0 4px; //スマホ横向き表示で文字がはみ出る対策
+  }
+  .page-entry{
+    .entry-header::after{
+      margin: 0 0 2em;
+      width: 100%;
+    }
+    .entry-header-html{
+      .share{
+        position: relative;
+        left: auto;
+        top: auto;
+        padding: 0;
+        &::before{
+          display: none;
+        }
+        &::after{
+          content: '';
+          display: inline-block;
+          margin: .5em;
+          width: 2.6em;
+          height: 1.6em;
+          background: no-repeat;
+          background-image: url(https://data.rokuzeudon.com/blog/img/icn-share-sp.svg);
+          background-size: contain;
+        }
+        li{
+          display: inline-block;
+        }
+      }
+      .line{ //PCで非表示にしていたLINEの共有ボタン
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* Media Queries - Smartphone */
+@media #{$mq-xs} {
+  .entry, .page-archive .archive-entry{
+    width: 100%;
+  }
+  /* nav */
+  #global-nav a{
+    padding: 10px 0; //スマホ横向き表示で文字がはみ出る対策を元に戻す
+  }
+  /* page-entry */
+  .page-entry{
+    .entry-header{
+      padding: 12em 0 0;
+    }
+    /* entry-content */
+    .entry-content{
+      p{
+        width: 100%;
+      }
+      .mainimage {
+        height: 12em;
+        border-top: 4px solid $bg-gray-light;
+        border-bottom: 4px solid $bg-gray-light;
+        img{
+          top:0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 100%;
+        }
+        .mv{
+          width: auto;
+        }
+        .bg{
+          display: none;
+        }
+      }
+    }
+    .author-left,.author-right{
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+    }
+    .author-left{
+      padding: 1.5rem 1rem 0;
+    }
+    .author-right{
+      padding: 0 1rem 1rem;
+    }
+  }
+  /* urllist module */
+  .urllist-with-thumbnails{
+    .urllist-image{
+      display: none;
+    }
+  }
+  .hatena-module-category .hatena-urllist li {
+    margin: .3em .1em;
+    padding: 0;
+    a {
+      padding: .2em .6em;
+      font-size: .9em;
+    }
+  }
+}
