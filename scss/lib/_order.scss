@@ -9,8 +9,8 @@
 .entry-content{order: 1;}
 .entry-footer{order: 3;}
 .page-entry{
-	.entry-header{order: 1;}
-	.entry-content{order: 2;}
+  .entry-header{order: 1;}
+  .entry-content{order: 2;}
 }
 
 ////////// z-index
@@ -28,7 +28,7 @@
 
 // 詳細ページ
 .page-entry{
-	.entry-header-html .share{z-index: 3;}
-	.hatena-asin-detail > a, .hatena-asin-detail > div{z-index: 2;}
-	.hatena-asin-detail::before{z-index: 1;}
+  .entry-header-html .share{z-index: 3;}
+  .hatena-asin-detail > a, .hatena-asin-detail > div{z-index: 2;}
+  .hatena-asin-detail::before{z-index: 1;}
 }
