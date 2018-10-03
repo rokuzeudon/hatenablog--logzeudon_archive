@@ -1,28 +1,28 @@
-.page-archive{
-  .archive-header-category{
+.page-archive {
+  .archive-header-category {
     margin: 1em 1em 0;
     width: 100%;
     text-align: center;
   }
-  .archive-entry{
+  .archive-entry {
     position: relative;
     width: calc(50% - 3em);
     margin: 1em .5em 0;
     padding: 1em;
     background: $bg-white;
-    &:hover{
-      .entry-title-link{
+    &:hover {
+      .entry-title-link {
         color: $color-primary;
         transition: all .3s;
       }
     }
-    .date{
-      a{
+    .date {
+      a {
         font-size: .8em;
       }
     }
-    .categories{
-      a{
+    .categories {
+      a {
         margin: .8em 0;
         padding: .4em 1em;
         font-size: .7em;
@@ -30,21 +30,21 @@
         border-radius: .2em;
       }
     }
-    .entry-thumb-link{
+    .entry-thumb-link {
       display: block;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      div.entry-thumb{
+      div.entry-thumb {
         background-image: none !important; //公式CSSを上書き
       }
     }
-    .entry-description{
+    .entry-description {
       margin: 0;
     }
-    .hatena-star-add-button{
+    .hatena-star-add-button {
       display: none;
     }
   }
