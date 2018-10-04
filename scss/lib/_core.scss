@@ -16,7 +16,6 @@ html {
 a {
   color: $text-link;
   text-decoration: none;
-  transition: all .14s ease;
   &:hover {
     color: $text-link-hover;
   }
@@ -212,12 +211,10 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
   border-radius: .4em;
   background: #f8f8f8;
-  transition: ease .14s;
   &:hover {
     background: $bg-white;
     .entry-title-link {
       color: $color-primary;
-      transition: ease .14s;
     }
   }
 }
@@ -385,11 +382,9 @@ h1, h2, h3, h4, h5, h6 {
     background: $bg-gray-light;
     border-radius: .4rem;
     text-align: left;
-    transition: ease-out .14s;
     &:hover {
       color: $color-primary;
       background: $bg-white;
-      transition: ease-out .14s;
     }
   }
 }
@@ -423,7 +418,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
     a {
       color: $text-default;
-      transition: .14s ease;
       &:hover {
         color: $color-primary;
         transform: .14s ease;
@@ -435,10 +429,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   border-radius: .4rem;
   background-color: $bg-gray-light;
-  transition: all .14s ease;
   &:hover {
     background-color: $bg-white;
-    transition: all .14s ease;
   }
 }
 .urllist-item-inner {
