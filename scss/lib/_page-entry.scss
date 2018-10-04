@@ -23,6 +23,9 @@
   }
   .entry-header {
     padding: 22em 0 0;
+    @media #{$mq-xs} {
+      padding: 12em 0 0;
+    }
   }
   .date a {
     pointer-events : none;
@@ -65,8 +68,9 @@
   .entry-content {
     width: 100%;
     margin: 1.2em 0 0;
-    line-height: 1.8;
     border-bottom: 1px solid $border-gray;
+    line-height: 1.8;
+    @media #{$mq-lg} { line-height: 2.2 }
     p {
       strong,b {
         background: linear-gradient(transparent 60%, rgba(247, 222, 28, .5) 40%);
@@ -87,6 +91,11 @@
       height: 20em;
       overflow: hidden;
       background: $bg-gray;
+      @media #{$mq-xs} {
+        height: 12em;
+        border-top: 4px solid $bg-gray-light;
+        border-bottom: 4px solid $bg-gray-light;
+      }
       img {
         position: absolute;
         top: 50%;
@@ -95,11 +104,20 @@
         margin: auto;
         height: auto;
         transform: translateY(-50%);
+        @media #{$mq-xs} {
+          top:0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 100%;
+        }
       }
       .mv { //新しい記事用
         width: 35em;
         border-radius: .8rem;
         box-shadow: 1em 1em 3em .2em rgba(0, 0, 0, 0.2);
+        @media #{$mq-xs} {
+          width: auto;
+        }
       }
       .bg { //新しい記事用
         display: block;
@@ -112,6 +130,9 @@
         background-size: cover !important;
         filter: blur(.2em);
         opacity: .9;
+        @media #{$mq-xs} {
+          display: none;
+        }
       }
     }
     p.mainimage { //古い記事用
@@ -303,6 +324,20 @@
       font-size: .9rem;
     }
   }
+  @media #{$mq-xs} {
+    .author-left,.author-right {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+    }
+    .author-left {
+      padding: 1.5rem 1rem 0;
+    }
+    .author-right {
+      padding: 0 1rem 1rem;
+    }
+  }
   .author-label {
     display: inline-block;
     position: relative;
@@ -364,6 +399,22 @@
   }
   .pager-next::before {
     content: "前回の記事へ";
+  }
+}
+
+@media #{$mq-xs} {
+  .urllist-with-thumbnails {
+    .urllist-image {
+      display: none;
+    }
+  }
+  .hatena-module-category .hatena-urllist li {
+    margin: .3em .1em;
+    padding: 0;
+    a {
+      padding: .2em .6em;
+      font-size: .9em;
+    }
   }
 }
 
