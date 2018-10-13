@@ -61,7 +61,7 @@
         width: 40px;
         height: 10px;
         background: no-repeat;
-        background-image: url(https://data.rokuzeudon.com/blog/img/icn-share.svg);
+        background-image: url("//data.rokuzeudon.com/blog/img/icn-share.svg");
         background-size: contain;
         @media #{$mq-sm} {
           display: block;
@@ -74,7 +74,7 @@
         width: 2.6em;
         height: 1.6em;
         background: no-repeat;
-        background-image: url(https://data.rokuzeudon.com/blog/img/icn-share-sp.svg);
+        background-image: url("//data.rokuzeudon.com/blog/img/icn-share-sp.svg");
         background-size: contain;
         @media #{$mq-sm} {
           display: none;
