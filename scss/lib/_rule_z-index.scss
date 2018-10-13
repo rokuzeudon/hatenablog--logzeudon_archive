@@ -1,18 +1,3 @@
-// .entry-header
-.date { order: 2 }
-.entry-title { order: 1 }
-.categories { order: 3 }
-.customized-header { order: 4 }
-
-// .entry-inner
-.entry-header { order: 2 }
-.entry-content { order: 1 }
-.entry-footer { order: 3 }
-.page-entry {
-  .entry-header { order: 1 }
-  .entry-content { order: 2 }
-}
-
 // メニュー
 .menuButton { z-index: 1000 }
 #global-nav { z-index: 999 }
