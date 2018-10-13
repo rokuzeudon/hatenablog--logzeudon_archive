@@ -1,11 +1,11 @@
 [@rokuzeudon](https://github.com/rokuzeudon)の個人ブログ用テーマです。
 株式会社はてな様のデザインテーマ[Hatena-Blog-Theme-Boilerplate](https://github.com/hatena/Hatena-Blog-Theme-Boilerplate)をベースにしています。
 
-# Requirements
+# 条件
 
 - [Node.js](https://nodejs.org/)
 
-# Installation
+# インストール
 
 ```
 $ git clone git@github.com:rokuzeudon/blog.rokuzeudon.com.git
@@ -13,11 +13,11 @@ $ cd blog.rokuzeudon.com
 $ npm install
 ```
 
-# Usage
+# 始め方
 
 `$ npm start`
 
-## Optional
+## 任意
 
 テーマ検証に使う[はてなブログ](https://blog.hatena.ne.jp/)を用意し、
 `デザイン設定 > カスタマイズ > デザインCSS` に下記を保存します。
@@ -29,7 +29,7 @@ $ npm install
 
 npm実行中、出力した`style.css`が検証用ブログに反映されるようになります。
 
-# Structure
+# 構造
 
 ```
 blog.rokuzeudon.com/
@@ -40,7 +40,7 @@ blog.rokuzeudon.com/
  ┗ style.css
 ```
 
-# License
+# ライセンス
 
 Released under the CC BY 2.1 JP License.  
 [クリエイティブ・コモンズ　リーガル・コード](https://creativecommons.org/licenses/by/2.1/jp/legalcode)

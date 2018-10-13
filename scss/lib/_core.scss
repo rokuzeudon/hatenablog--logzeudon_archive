@@ -1,108 +1,104 @@
-/* selected text */
-::-moz-selection  { background: $bg-gray-light; color: $color-primary; }
-::selection  { background: $bg-gray-light; color: $color-primary; }
+// selected text
+::-moz-selection, ::selection {
+  background: $bg-gray-light;
+  color: $color-primary;
+}
 
-/* Common */
-html,
-body{
-  font-family:
-    -apple-system, // iOS San Francisco
-    BlinkMacSystemFont, // iOS Chrome San Francisco
-    YakuHanJP, // 約物半角専用のWebフォント http://qrac.github.io/yakuhanjp/
-    "Hiragino Kaku Gothic ProN", // OS X, iOS ヒラギノ
-    Meiryo, // Windows メイリオ
-    sans-serif;
+// Common
+body,
+html {
+  font-family:-apple-system, BlinkMacSystemFont, YakuHanJP, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   font-size: 16px;
   letter-spacing: .05em;
   color: $text-default;
   background: $bg-gray;
 }
-a{
+@media #{$mq-lg} {
+  body { font-size: 120% }
+}
+a {
   color: $text-link;
   text-decoration: none;
-  transition: all .14s ease;
-  &:hover{ color: $text-link-hover; }
-  &:visited{ color: $text-link; }
+  &:hover {
+    color: $text-link-hover;
+  }
+  &:visited {
+    color: $text-link;
+  }
 }
-h1,h2,h3,h4,h5,h6{
-  a,a:hover,a:visited{
+h1, h2, h3, h4, h5, h6 {
+  a, a:hover, a:visited {
     color: $text-default;
     text-decoration: none;
   }
 }
 
-/* Buttons */
-.btn{
-  display: inline-block;
-  padding: .4rem .8rem;
-  margin: 0;
-  border-radius: .2em;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1.4rem;
-  color: $text-default;
-  background: $bg-gray-light;
-  text-decoration: none;
-  &:hover{
-    background-color: $bg-gray;
-    text-decoration: none;
-  }
-}
-
-/* flex */
-#main-inner, .entry-inner, .entry-header, .archive-entries, .entries-access-ranking, .sns-area{
+// flex
+#main-inner,
+.archive-entries,
+.entries-access-ranking,
+.entry-header,
+.entry-inner,
+.sns-area {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-/* header */
-.header-image-only{
-  #blog-title{
+// header
+.header-image-only {
+  #blog-title {
     padding: 1px;
     height: 60px;
     background-color: $bg-white;
   }
-  #blog-title-inner{
+  #blog-title-inner {
     width: 45px;
     height: 42px !important;
-    background-image: url('https://data.rokuzeudon.com/portfolio/img/icn_logo.svg') !important;
+    background-image: url("https://data.rokuzeudon.com/portfolio/img/icn_logo.svg") !important;
     background-size: 45px 42px;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 0;
     overflow: hidden;
   }
-  #blog-description{
+  #blog-description {
     display: none;
   }
 }
 
-/* nav */
+// nav
 .menuButton {
   position: fixed;
   top: 0;
-  width: 6em;
-  height: 6em;
-  margin: -1em;
+  height: 2.6em;
+  width: 2.6em;
+  margin: .655em;
   border: none;
   border-radius: 50%;
   background: $color-primary;
-  svg{
-    width: 2.6em;
-    use{
-      transition: .1s ease-out;
-      &:nth-of-type(1){
-        transform: rotate(0)
-      }
-      &:nth-of-type(2){
-        opacity: 1;
-      }
-      &:nth-of-type(3){
-        transform: rotate(0);
-      }
+  @media #{$mq-sm} {
+    width: 6em;
+    height: 6em;
+    margin: -1em;
+  }
+  svg {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    width: 1.8em;
+    @media #{$mq-sm} {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 2.6em;
+    }
+    use { transition: .1s ease-out;
+      &:nth-of-type(1) { transform: rotate(0) }
+      &:nth-of-type(2) { opacity: 1 }
+      &:nth-of-type(3) { transform: rotate(0) }
     }
   }
 }
-#global-nav{
+#global-nav {
   visibility: hidden;
   position: fixed;
   display: table;
@@ -110,38 +106,41 @@ h1,h2,h3,h4,h5,h6{
   height: 100%;
   width: 100%;
   text-align: center;
-  color: #fff;
-  a{
+  color: $text-white;
+  a {
     display: block;
-    padding: 10px 0;
-    color: #fff;
+    padding: 0 0 4px;
+    color: $text-white;
     text-decoration: none;
     opacity: .86;
-    &:hover{
+    @media #{$mq-sm} {
+      padding: 10px 0;
+    }
+    &:hover {
       opacity: 1;
     }
   }
-  ul{
+  ul {
     display: table-cell;
     padding: 0;
     vertical-align: middle;
     list-style: none;
   }
-  li{
+  li {
     opacity: 0;
     transform: scaleX(0) translateX(-260px);
   }
-  .logo{
+  .logo {
     position: absolute;
     top: 6.5px;
     width: 100%;
-    a{
+    a {
       margin: 0 auto;
       padding: 0;
       width: 54px;
     }
   }
-  .about a{
+  .about a {
     display: inline-block;
     margin: 1em auto 0;
     padding: .4em 1em;
@@ -151,87 +150,101 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 2em;
   }
 }
-#nav-bg{
+#nav-bg {
   position: fixed;
   display: block;
   transform: scale(.01);
-  width: 4000px;
-  height: 4000px;
-  margin: -2000px 0 0 -2000px;
-  top: 35px;
-  left: 35px;
+  width: 2000px;
+  height: 2000px;
+  margin: -1000px 0 0 -1000px;
+  top: 32px;
+  left: 32px;
   border-radius: 50%;
   background: $color-primary;
   backface-visibility: hidden;
   transition: all .2s ease-out;
   cursor: pointer;
+  @media #{$mq-sm} {
+    width: 4000px;
+    height: 4000px;
+    margin-left: -2000px;
+    margin-top: -2000px;
+    top: 35px;
+    left: 35px;
+  }
+  @media #{$mq-xl} {
+    width: 100%;
+    height: 100%;
+    margin: -100% 0 0;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 .open {
-  #menuBody{
-    display: block;
-  }
-  #global-nav{
+  #menuBody { display: block }
+  #global-nav {
     visibility: visible;
-    ul li{
+    ul li {
       opacity: 1;
       transform: scaleX(1) translateX(0);
-      transition: all 0.4s ease-out;
+      transition: all .4s ease-out;
       transition-delay: .1s;
-      &:nth-child(2){transition-delay: .15s;}
-      &:nth-child(3){transition-delay: .2s;}
-      &:nth-child(4){transition-delay: .25s;}
-      &:nth-child(5){transition-delay: .3s;}
-      &:nth-child(6){transition-delay: .35s;}
+      &:nth-child(2) { transition-delay: .15s }
+      &:nth-child(3) { transition-delay: .2s }
+      &:nth-child(4) { transition-delay: .25s }
+      &:nth-child(5) { transition-delay: .3s }
+      &:nth-child(6) { transition-delay: .35s }
     }
   }
-  #nav-bg{
+  #nav-bg {
     transform: scale(1);
     transition: all .6s ease-out;
+    @media #{$mq-xl} {
+      margin-top: 0;
+      opacity: 1;
+    }
   }
-  .menuButton svg use{
+  .menuButton svg use {
     transition: .18s ease-out;
-    &:nth-of-type(1){
-      transform: rotate(-45deg) translate(-1.5rem, 1.2rem);
-    }
-    &:nth-of-type(2){
-      opacity: 0;
-    }
-    &:nth-of-type(3){
-      transform: rotate(45deg) translate(.8rem, -2.1rem)
-    }
+    &:nth-of-type(1) { transform: rotate(-45deg) translate(-1.5rem, 1.2rem) }
+    &:nth-of-type(2) { opacity: 0 }
+    &:nth-of-type(3) { transform: rotate(45deg) translate(.8rem, -2.1rem) }
   }
 }
 
-/* breadcrumb */
-.breadcrumb{
+// breadcrumb
+.breadcrumb {
   margin: 0;
   padding: 8px 15px;
   border-bottom: 1px solid $border-gray;
   background: $bg-gray-light;
   font-size: .8em;
   text-align: center;
-  a{
+  a {
     color: $text-gray;
     text-decoration: none;
-    &:hover,&visited{
+    &:hover, &visited {
       color: $text-default;
     }
   }
 }
-.breadcrumb-gt{
+.breadcrumb-gt {
   display: inline-block;
   margin: 0 .3em;
   transform: scaleX(.5);
 }
 
-/* entry */
-#main-inner{
+// entry
+#main-inner {
   margin: auto;
   padding: 1em;
   max-width: 60em;
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
-.entry{
+.entry {
   position: relative;
   overflow: hidden;
   width: calc(50% - 2em);
@@ -240,41 +253,42 @@ h1,h2,h3,h4,h5,h6{
   box-sizing: border-box;
   border-radius: .4em;
   background: #f8f8f8;
-  transition: ease .14s;
-  &:hover{
+  &:hover {
     background: $bg-white;
-    .entry-title-link{
+    .entry-title-link {
       color: $color-primary;
-      transition: ease .14s;
     }
   }
+  @media #{$mq-xs} {
+    width: 100%;
+  }
 }
-.entry-header{
+.entry-header {
   position: relative;
   width: 100%;
   padding: 8em 0 0;
   line-height: 1.4;
 }
-.entry-title{
+.entry-title {
   margin: .8em 0 .3em;
   width: 100%;
   font-size: 1em;
   font-weight: 600;
 }
-.date{
+.date {
   margin: 0 .8em 0 0;
   font-size: .8em;
   font-weight: 200;
-  a{
+  a {
     display: block;
     color: $text-gray;
     text-decoration: none;
   }
 }
-.categories{
+.categories {
   font-size: .8em;
   font-weight: 200;
-  a{
+  a {
     display: inline-block;
     color: $text-gray;
     text-decoration: none;
@@ -289,18 +303,18 @@ h1,h2,h3,h4,h5,h6{
   height: 100%;
   opacity: 0;
 }
-.entry-header-menu{
+.entry-header-menu {
   position: absolute;
   top: 0;
   left: 0;
 }
-.entry-content{
+.entry-content {
   width: 28em;
-  margin: 0 0 2em 0;
-  p{
+  margin: 0 0 2em;
+  p {
     margin: 0 0 2em;
   }
-  .mainimage img{
+  .mainimage img {
     position: absolute;
     width: auto;
     max-width: none !important;
@@ -309,65 +323,67 @@ h1,h2,h3,h4,h5,h6{
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  ul, ol{
-    margin: .7em 0 2em 0;
+  ol,
+  ul {
+    margin: .7em 0 2em;
     padding: 0 0 0 1.4em;
-    li{
+    li {
       margin: 0 .5em .5em 0;
       line-height: 1.4;
-      li{
+      li {
         margin: 0 .5em .5em 0;
       }
     }
   }
-  h3,h4,h5{
-    margin: 3em 0 1.5em 0;
+  h3, h4, h5 {
+    margin: 3em 0 1.5em;
     line-height: 1.4;
   }
-  h3{
+  h3 {
     font-size: 1.4em;
     text-align: center;
     color: $color-primary;
   }
-  h4{
+  h4 {
     padding: 0 0 0 1em;
     font-size: 1.2em;
     color: $color-primary;
     border-left: 4px solid $color-primary;
   }
-  h5{
+  h5 {
     padding: 0 0 0 1em;
     font-size: 1.1em;
     border-left: 2px solid $color-primary;
   }
-  table{
+  table {
     margin: 0 0 2em;
     border-collapse: collapse;
     border-spacing: 0;
   }
-  table th,table td{
+  table td,
+  table th {
     padding: .4em .8em;
     border: 1px solid $border-gray;
   }
-  table th{
+  table th {
     background: $bg-gray-light;
   }
-  dl{
+  dl {
     margin: 0 0 2em;
   }
-  dt{
-    margin: 0 0 1.2em 0;
+  dt {
+    margin: 0 0 1.2em;
     border-bottom: 1px solid $border-gray;
     font-weight: bold;
   }
-  dd{
-    margin: .5em 0 1.2em ;
+  dd {
+    margin: .5em 0 1.2em;
   }
-  blockquote{
+  blockquote {
     margin: 0 0 1em;
     padding: 1.6em;
     background: $bg-gray-light;
-    &:before{
+    &:before {
       content: "“";
       position: absolute;
       top: 0;
@@ -377,7 +393,7 @@ h1,h2,h3,h4,h5,h6{
       line-height: 1em;
       color: $text-gray-light;
     }
-    &:after{
+    &:after {
       content: "”";
       position: absolute;
       bottom: 0;
@@ -387,22 +403,23 @@ h1,h2,h3,h4,h5,h6{
       line-height: 0;
       color: $text-gray-light;
     }
-    p{
+    p {
       margin: 0;
     }
   }
 }
-.entry-footer{
+
+.entry-footer {
   display: none;
 }
 
-/* pager */
-.pager{
+// pager
+.pager {
   margin: 2em auto 0;
   padding: 1em;
   max-width: 40em;
   text-align: center;
-  a{
+  a {
     display: inline-block;
     margin: 1em .2em;
     padding: 1em;
@@ -410,105 +427,100 @@ h1,h2,h3,h4,h5,h6{
     background: $bg-gray-light;
     border-radius: .4rem;
     text-align: left;
-    transition: ease-out .14s;
-    &:hover{
+    &:hover {
       color: $color-primary;
       background: $bg-white;
-      transition: ease-out .14s;
     }
   }
 }
-.pager-prev, .pager-next{
+.pager-next, .pager-prev {
   display: inline-block;
   vertical-align: top;
 }
 
-/* aside */
-#box2{
+// aside
+#box2 {
   max-width: 40em;
   margin: 0 auto;
   padding: 1em;
 }
-.hatena-module{
-  margin: 0 0 2em 0;
+.hatena-module {
+  margin: 0 0 2em;
 }
-.hatena-module-title{
-  margin: 0 0 1.6em 0;
+.hatena-module-title {
+  margin: 0 0 1.6em;
   text-align: center;
   background: linear-gradient(transparent 60%, rgba(247, 222, 28, .5) 40%);
-  a{
+  a {
     color: $text-default;
   }
 }
-.hatena-urllist{
+.hatena-urllist {
   padding: 0;
-  li{
+  li {
     overflow: hidden;
     margin: 0 0 1em;
     line-height: 1.5;
-    a{
+    a {
       color: $text-default;
-      transition: .14s ease;
-      &:hover{
+      &:hover {
         color: $color-primary;
         transform: .14s ease;
       }
     }
   }
 }
-.urllist-item{
+.urllist-item {
   width: 100%;
   border-radius: .4rem;
   background-color: $bg-gray-light;
-  transition: all .14s ease;
-  &:hover{
+  &:hover {
     background-color: $bg-white;
-    transition: all .14s ease;
   }
 }
-.urllist-item-inner{
+.urllist-item-inner {
   position: relative;
 }
-.urllist-title-link{
+.urllist-title-link {
   display: block;
-  padding: 1em 1em .5em 1em;
+  padding: 1em 1em .5em;
   font-size: .96em;
   font-weight: 500;
 }
-.bookmark-widget-counter{
+.bookmark-widget-counter {
   position: absolute;
   right: 0;
-  padding: 0 1em 1em 1em;
+  padding: 0 1em 1em;
 }
-.urllist-categories{
-  padding: 0 1em 1em 1em;
+.urllist-categories {
+  padding: 0 1em 1em;
   font-size: .9em;
 }
-.hatena-module-category{
-  li{
+.hatena-module-category {
+  li {
     display: inline-block;
     margin: 0 .3em .3em 0;
     padding: .3em;
-    a{
+    a {
       display: block;
       margin: 0;
       padding: .4em 1em;
       color: $text-default;
       background: $bg-gray-light;
       border-radius: .2em;
-      &:hover{
+      &:hover {
         color: $color-primary;
         background: $bg-white;
       }
     }
   }
 }
-.search-form{
+.search-form {
   position: relative;
   background: $bg-white;
   border-radius: .2em;
 }
-.search-module-input{
+.search-module-input {
   width: 90%;
   height: 26px;
   padding: .5em 1em;
@@ -516,17 +528,17 @@ h1,h2,h3,h4,h5,h6{
   background: none;
   border: none;
 }
-.search-module-button{
+.search-module-button {
   position: absolute;
   top: .6em;
   right: .6em;
   width: 20px;
   height: 20px;
-  background: transparent url(http://blog.hatena.ne.jp/images/theme/search.png) no-repeat right center;
+  background: transparent url("http://blog.hatena.ne.jp/images/theme/search.png") no-repeat right center;
   border: none;
   text-indent: -9999px;
   opacity: .5;
-  &:hover{
+  &:hover {
     opacity: .3;
   }
 }
@@ -535,38 +547,38 @@ h1,h2,h3,h4,h5,h6{
   width: 15em;
 }
 
-/* Footer */
-#footer{
+// Footer
+#footer {
   padding: 2em 1em;
   text-align: center;
   font-size: .8em;
   line-height: 1.5;
   color: $text-white;
   background: $color-primary;
-  a{
+  a {
     color: $text-white;
     text-decoration: underline;
     opacity: .86;
-    &:hover{
+    &:hover {
       text-decoration: none;
       opacity: 1;
     }
   }
-  .logo{
+  .logo {
     width: 5em;
     margin: 0 auto;
   }
-  p{
+  p {
     margin: .4em;
   }
 }
 
-/* search-result */
-.search-result{
+// search-result
+.search-result {
   margin: 0 auto 3em;
   width: 100%;
   max-width: 40em;
 }
-.search-result-form{
+.search-result-form {
   max-width: 40em;
 }
