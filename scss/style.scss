@@ -15,12 +15,22 @@
 
 // import variable
 @import "lib/_variable";
-@import "lib/_rule_flex-order";
-@import "lib/_rule_z-index";
+
+// import rule
+@import "lib/rule/flex-order";
+@import "lib/rule/z-index";
 
 // import core
-@import "lib/_core";
+@import "lib/core/_common";
+@import "lib/core/blog-title";
+@import "lib/core/breadcrumb";
+@import "lib/core/main";
+@import "lib/core/box2";
+
+// import original
+@import "lib/original/nav";
+@import "lib/original/footer";
 
 // import pages
-@import "lib/_page-archive";
-@import "lib/_page-entry";
+@import "lib/pages/page-archive";
+@import "lib/pages/page-entry";
