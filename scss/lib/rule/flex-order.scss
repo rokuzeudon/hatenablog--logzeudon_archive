@@ -1,3 +1,15 @@
+// flex
+#main-inner,
+.archive-entries,
+.entries-access-ranking,
+.entry-header,
+.entry-inner,
+.sns-area {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 // .entry-header
 .date { order: 2 }
 .entry-title { order: 1 }
