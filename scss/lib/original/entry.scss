@@ -53,14 +53,13 @@
     background-size: cover !important;
   }
 }
-
 @media #{$mq-xs} { // スマホ表示の調整
   .page-entry {
     .entry-header {
-      padding: 12em 0 0;
+      padding: 14em 0 0;
     }
     .mainimage {
-      height: 12em;
+      height: 14em;
       border-top: 4px solid $bg-gray-light;
       border-bottom: 4px solid $bg-gray-light;
       img {
