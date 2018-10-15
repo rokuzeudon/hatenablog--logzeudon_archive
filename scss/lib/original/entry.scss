@@ -1,4 +1,4 @@
-// メインビジュアル
+/* メインビジュアル */
 .mainimage { // 一覧での表示
   img {
     position: absolute;
@@ -74,8 +74,7 @@
   }
 }
 
-// シェアボタン
-
+/* シェアボタン */
 .share {
   position: relative;
   padding: 0;

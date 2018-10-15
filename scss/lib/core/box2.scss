@@ -3,7 +3,8 @@
   margin: 0 auto;
   padding: 1.2em;
 }
-// モジュール共通
+
+/* モジュール共通 */
 .hatena-module {
   margin: 0 0 2em;
 }
@@ -45,7 +46,7 @@
   padding: 0 1em 1em;
 }
 
-// カテゴリーモジュール
+/* カテゴリーモジュール */
 .hatena-module-category {
   li {
     display: inline-block;
@@ -65,7 +66,7 @@
   }
 }
 
-// 検索モジュール
+/* 検索モジュール */
 .search-form, .search-result-form {
   position: relative;
   background: $bg-white;
