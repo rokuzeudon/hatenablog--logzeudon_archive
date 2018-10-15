@@ -73,3 +73,42 @@
     }
   }
 }
+
+// シェアボタン
+
+.share {
+  position: relative;
+  padding: 0;
+  @media #{$mq-sm} {
+    position: fixed;
+    top: 8em;
+    left: 1em;
+  }
+  &::after { // スマホ用画像
+    content: '';
+    margin: .5em;
+    width: 2.6em;
+    height: 1.6em;
+    background: url("//data.rokuzeudon.com/blog/img/icn-share-sp.svg") top/contain no-repeat;
+    display: inline-block;
+    @media #{$mq-sm} { display: none }
+  }
+  &::before { // PC用画像
+    content: '';
+    margin: .3em auto;
+    width: 40px;
+    height: 10px;
+    background: url("//data.rokuzeudon.com/blog/img/icn-share.svg") top/contain no-repeat;
+    display: none;
+    @media #{$mq-sm} { display: block }
+  }
+  li { // スマホでは横並び、PCでは縦並び＆LINEボタン非表示
+    display: inline-block;
+    @media #{$mq-sm} {
+      display: block;
+      &.line {
+        display: none;
+      }
+    }
+  }
+}
