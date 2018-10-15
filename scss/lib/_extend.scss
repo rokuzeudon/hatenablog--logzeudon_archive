@@ -1,0 +1,26 @@
+%btn-small {
+  display: inline-block;
+  padding: .4em .6em;
+  font-size: .8em;
+  border-radius: $radius-small;
+  background: $bg-white;
+  border: 1px solid $border-default;
+  color: $text-default;
+  &:hover {
+    border: 1px solid $border-link;
+    color: $text-link
+  }
+}
+%btn-default {
+  display: inline-block;
+  padding: .4em .6em;
+  font-size: .9em;
+  border-radius: $radius-small;
+  background: $bg-white;
+  border: 1px solid $border-default;
+  color: $text-default;
+  &:hover {
+    border: 1px solid $border-link;
+    color: $text-link
+  }
+}

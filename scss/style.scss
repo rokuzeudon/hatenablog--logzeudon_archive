@@ -13,8 +13,9 @@
 // import normalize
 @import "node_modules/normalize.css/normalize";
 
-// import variable
+// import options
 @import "lib/_variable";
+@import "lib/_extend";
 
 // import rule
 @import "lib/rule/flex-order";
