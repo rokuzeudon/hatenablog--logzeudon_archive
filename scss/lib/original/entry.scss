@@ -167,11 +167,7 @@
     margin: 0 0 1em;
   }
   a {
-    display: inline-block;
-    padding: .3em .8em;
-    border: 1px solid $border-gray;
-    background: $bg-white;
-    border-radius: $radius-small;
+    @extend %btn-small;
   }
   .twitter::before, .hatenablog::before, .portfolio::before {
     display: inline-block;

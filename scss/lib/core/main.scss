@@ -272,10 +272,6 @@
   top: 1em;
   left: 1em;
   a {
-    padding: .4em .6em;
-    font-size: 80%;
-    border-radius: $radius-small;
-    border: 1px solid $border-gray;
-    background: $bg-white;
+    @extend %btn-small;
   }
 }

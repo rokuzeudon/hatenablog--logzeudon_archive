@@ -51,6 +51,9 @@
   }
 
   // comment
+  .leave-comment-title {
+    @extend %btn-default;
+  }
   .comment-box {
     ul {
       padding: 0;
