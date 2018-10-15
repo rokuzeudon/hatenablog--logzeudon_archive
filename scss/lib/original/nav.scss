@@ -61,6 +61,7 @@
     padding: 6px 0;
     color: $text-white;
     text-decoration: none;
+    font-size: 1.4rem;
     opacity: .86;
     &:hover { opacity: 1 }
   }
@@ -78,18 +79,22 @@
     display: inline-block;
     margin: 1em auto 0;
     padding: .4em 1em;
-    font-size: .9em;
+    font-size: 1rem;
     color: $color-primary;
     background: $bg-white;
     border-radius: 2em;
   }
   ul {
     display: table-cell;
+    padding: 2em 0 0;
     vertical-align: middle;
     list-style: none;
     li {
       opacity: 0;
       transform: scaleX(0) translateX(-260px);
+      @media #{$mq-lg} {
+        margin: 0 0 1em;
+      }
     }
   }
 }
