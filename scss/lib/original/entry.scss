@@ -134,3 +134,56 @@
     }
   }
 }
+
+/* この記事を書いた人 */
+.author-box {
+  margin: 3rem 0;
+  border: 2px solid $border-gray;
+  font-size: .9em;
+}
+.author-left {
+  display: table-cell;
+  vertical-align: middle;
+  width: 220px;
+  padding: 1rem 1rem .5rem;
+  border-right: 2px #eaedf2 dashed;
+  text-align: center;
+  dl {
+    margin: .5rem 1rem;
+    font-weight: bold;
+  }
+  dd {
+    margin: 0;
+    font-size: .9rem;
+  }
+}
+@media #{$mq-xs} {
+  .author-left,.author-right {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+  }
+  .author-left {
+    padding: 1.5rem 1rem 0;
+  }
+  .author-right {
+    padding: 0 1rem 1rem;
+  }
+}
+.author-label {
+  display: inline-block;
+  position: relative;
+  min-width: 120px;
+  margin: 0 0 .5rem;
+  padding: .4rem .8rem;
+  border-radius: 1rem;
+  background: $bg-gray-light;
+  color: $text-default;
+  font-size: .9rem;
+}
+.author-right {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 1rem 1rem .5rem;
+}
