@@ -202,3 +202,14 @@
 .author-label {
   display: none;
 }
+
+/* この記事のURLとタイトルをコピーする */
+.copy_btn {
+  margin: 0 0 1.2em;
+  @extend %btn-small;
+}
+.copied {
+  color: $text-gray;
+  border: 1px solid $border-gray;
+  background: $bg-gray-light;
+}
