@@ -137,45 +137,72 @@
 
 /* この記事を書いた人 */
 .author-box {
-  margin: 3rem 0;
+  margin: 0 0 2em;
   border: 2px solid $border-gray;
-  font-size: .9em;
+  border-radius: $radius-default;
 }
 .author-left {
   display: table-cell;
-  vertical-align: middle;
-  width: 220px;
-  padding: 1rem 1rem .5rem;
-  border-right: 2px #eaedf2 dashed;
+  width: 12em;
+  padding: 2em 1em;
+  box-sizing: border-box;
   text-align: center;
+  vertical-align: middle;
+  border-right: 2px $border-gray dashed;
   dl {
-    margin: .5rem 1rem;
+    margin: .5em 1em 0;
     font-weight: bold;
   }
   dd {
-    margin: 0;
-    font-size: .9rem;
+    margin: .5em 0 0;
+    font-size: .8em;
   }
-}
-@media #{$mq-xs} {
-  .author-left,.author-right {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    border: none;
-  }
-  .author-left {
-    padding: 1.5rem 1rem 0;
-  }
-  .author-right {
-    padding: 0 1rem 1rem;
-  }
-}
-.author-label {
-  display: none;
 }
 .author-right {
   display: table-cell;
   vertical-align: middle;
-  padding: 1rem 1rem .5rem;
+  padding: 1em 1.4em .5em;
+  box-sizing: border-box;
+  p {
+    margin: 0 0 1em;
+  }
+  a {
+    display: inline-block;
+    padding: .3em .8em;
+    border: 1px solid $border-gray;
+    background: $bg-white;
+    border-radius: $radius-small;
+  }
+  .twitter::before, .hatenablog::before, .portfolio::before {
+    display: inline-block;
+    font: 1.2em/1 blogicon;
+    vertical-align: bottom;
+    margin: 0 .4em 0 0;
+  }
+  .twitter::before {
+    content: "\f035";
+  }
+  .hatenablog::before {
+    content: "\f000";
+  }
+  .portfolio::before {
+    content: "\f03e";
+  }
+}
+@media #{$mq-xs} { // スマホでは縦並びに
+  .author-left, .author-right {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+  .author-left {
+    padding: 1.5rem 1rem;
+  }
+  .author-right {
+    padding: 1rem;
+    background: $bg-gray-light;
+  }
+}
+.author-label {
+  display: none;
 }
