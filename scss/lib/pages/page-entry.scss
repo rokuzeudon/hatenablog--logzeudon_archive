@@ -11,7 +11,6 @@
     background: $bg-white;
     &:hover .entry-title-link {
       color: $text-default;
-      pointer-events: none;
     }
   }
   .entry-inner {
@@ -354,6 +353,7 @@
       }
     }
   }
+
   // pager
   .pager-prev, .pager-next {
     width: 49%;
@@ -369,6 +369,7 @@
   }
 }
 
+// スマホではモジュールのサムネイル画像を表示しない
 @media #{$mq-xs} {
   .urllist-with-thumbnails {
     .urllist-image {
@@ -385,8 +386,9 @@
   }
 }
 
+// IEで親要素の端っこに墨溜まりみたいな表示になってしまう対策
 @media all and (-ms-high-contrast:none) {
   .page-entry .entry-content p.mainimage .bg {
-    filter: blur(0); //IEで親要素の端っこに墨溜まりみたいな表示になってしまう対策
+    filter: blur(0);
   }
 }
