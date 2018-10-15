@@ -17,9 +17,12 @@ $text-link-hover: #0f5373;
 // Border color
 $border-gray: #ddd;
 
+// Border radius
+$radius-default: .4em;
+$radius-small: .2em;
+
 // Media Queries
-$mq-xs: "(max-width: 480px)";
-$mq-sm: "(min-width: 768px)";
-$mq-md: "(min-width: 992px)";
-$mq-lg: "(min-width: 1200px)";
+$mq-xs: "(max-width: 480px)"; // スマホ限定
+$mq-sm: "(min-width: 768px)"; // タブレット以上
+$mq-lg: "(min-width: 1200px)"; // PC大画面（文字サイズ拡大）
 $mq-xl: "(min-width: 1700px)"; // nav専用

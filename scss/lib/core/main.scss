@@ -1,18 +1,18 @@
 #main-inner {
   margin: auto;
-  padding: 1em;
+  padding: 1.2em;
   max-width: 60em;
   word-wrap: break-word;
 }
 .entry {
   position: relative;
   overflow: hidden;
-  width: calc(50% - 2em);
-  margin: 2em 1em 0;
+  width: calc(50% - 1.6em);
+  margin: .8em;
   padding: 1em;
   box-sizing: border-box;
-  border-radius: .4em;
-  background: #f8f8f8;
+  border-radius: $radius-default;
+  background: $bg-gray-light;
   &:hover {
     background: $bg-white;
     .entry-title-link {
@@ -24,36 +24,27 @@
   }
 }
 .entry-header {
-  position: relative;
-  width: 100%;
   padding: 8em 0 0;
   line-height: 1.4;
 }
 .entry-title {
-  margin: .8em 0 .3em;
   width: 100%;
+  margin: .8em 0 .3em;
   font-size: 1em;
   font-weight: 600;
 }
-.date {
-  margin: 0 .8em 0 0;
+.date, .categories {
   font-size: .8em;
-  font-weight: 200;
-  a {
-    display: block;
-    color: $text-gray;
-    text-decoration: none;
-  }
-}
-.categories {
-  font-size: .8em;
-  font-weight: 200;
   a {
     display: inline-block;
     color: $text-gray;
-    text-decoration: none;
   }
 }
+.date {
+  margin: 0 .8em 0 0;
+}
+
+// 続きを読む
 .entry-see-more {
   display: block;
   position: absolute;
@@ -63,11 +54,8 @@
   height: 100%;
   opacity: 0;
 }
-.entry-header-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+
+// 記事本文
 .entry-content {
   width: 28em;
   margin: 0 0 2em;
@@ -168,19 +156,21 @@
     }
   }
 }
+
+// ページャー
 .pager {
   margin: 2em auto 0;
-  padding: 1em;
+  padding: 1.2em;
   max-width: 40em;
   text-align: center;
   a {
     display: inline-block;
-    margin: 1em .2em;
+    margin: 1em 0;
     padding: 1em;
+    text-align: left;
+    border-radius: $radius-default;
     color: $text-default;
     background: $bg-gray-light;
-    border-radius: .4rem;
-    text-align: left;
     &:hover {
       color: $color-primary;
       background: $bg-white;
@@ -191,6 +181,22 @@
   display: inline-block;
   vertical-align: top;
 }
+
+// 記事フッターは一覧では非表示
 .entry-footer {
   display: none;
+}
+
+// 管理者向け 編集ボタンの表示
+.entry-header-menu {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  a {
+    padding: .4em .6em;
+    font-size: 80%;
+    border-radius: $radius-small;
+    border: 1px solid $border-gray;
+    background: $bg-white;
+  }
 }

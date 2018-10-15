@@ -1,20 +1,21 @@
 .breadcrumb {
   margin: 0;
-  padding: 8px 15px;
+  padding: .4em 1.2em;
   border-bottom: 1px solid $border-gray;
   background: $bg-gray-light;
   font-size: .8em;
   text-align: center;
   a {
     color: $text-gray;
-    text-decoration: none;
-    &:hover, &visited {
+    &:hover {
       color: $text-default;
     }
   }
 }
+
+// 矢印アイコン
 .breadcrumb-gt {
   display: inline-block;
   margin: 0 .3em;
-  transform: scaleX(.5);
+  transform: scaleX(.8);
 }

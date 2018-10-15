@@ -4,15 +4,14 @@
     max-width: none;
   }
   .entry {
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
     border-radius: 0;
     background: $bg-white;
-    &:hover {
-      .entry-title-link {
-        color: $text-default;
-      }
+    &:hover .entry-title-link {
+      color: $text-default;
+      pointer-events: none;
     }
   }
   .entry-inner {
@@ -26,7 +25,7 @@
       padding: 12em 0 0;
     }
   }
-  .date a {
+  .date {
     pointer-events : none;
   }
   .entry-title {

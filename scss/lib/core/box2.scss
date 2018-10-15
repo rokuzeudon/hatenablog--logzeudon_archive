@@ -1,8 +1,9 @@
 #box2 {
   max-width: 40em;
   margin: 0 auto;
-  padding: 1em;
+  padding: 1.2em;
 }
+// モジュール共通
 .hatena-module {
   margin: 0 0 2em;
 }
@@ -10,63 +11,52 @@
   margin: 0 0 1.6em;
   text-align: center;
   background: linear-gradient(transparent 60%, rgba(247, 222, 28, .5) 40%);
-  a {
-    color: $text-default;
-  }
 }
 .hatena-urllist {
   padding: 0;
   li {
-    overflow: hidden;
     margin: 0 0 1em;
-    line-height: 1.5;
+    line-height: 1.4em;
     a {
       color: $text-default;
-      &:hover {
-        color: $color-primary;
-        transform: .14s ease;
-      }
+      &:hover { color: $color-primary }
     }
   }
 }
 .urllist-item {
-  width: 100%;
-  border-radius: .4rem;
+  border-radius: $radius-default;
   background-color: $bg-gray-light;
-  &:hover {
-    background-color: $bg-white;
-  }
+  &:hover { background-color: $bg-white }
 }
 .urllist-item-inner {
   position: relative;
 }
 .urllist-title-link {
   display: block;
-  padding: 1em 1em .5em;
   font-size: .96em;
-  font-weight: 500;
+}
+.urllist-with-thumbnails li .urllist-image {
+  margin: 0 1em 0 0; //公式CSSの上書き用
+  width: 15em;
 }
 .bookmark-widget-counter {
   position: absolute;
   right: 0;
   padding: 0 1em 1em;
 }
-.urllist-categories {
-  padding: 0 1em 1em;
-  font-size: .9em;
-}
+
+// カテゴリーモジュール
 .hatena-module-category {
   li {
     display: inline-block;
-    margin: 0 .3em .3em 0;
-    padding: .3em;
+    margin: 0 .4em .8em 0;
     a {
       display: block;
       margin: 0;
       padding: .4em 1em;
+      border-radius: $radius-small;
       color: $text-default;
       background: $bg-gray-light;
-      border-radius: .2em;
       &:hover {
         color: $color-primary;
         background: $bg-white;
@@ -74,34 +64,33 @@
     }
   }
 }
-.search-form {
+
+// 検索モジュール
+.search-form, .search-result-form {
   position: relative;
   background: $bg-white;
-  border-radius: .2em;
+  border-radius: $radius-small;
+  border: none;
 }
-.search-module-input {
-  width: 90%;
-  height: 26px;
-  padding: .5em 1em;
+.search-module-input, .search-result-input {
+  width: calc(100% - 2.4em) !important;
+  height: 2.4em !important;
+  padding: .5em 1em !important;
+  box-sizing: border-box;
   color: $text-default;
   background: none;
   border: none;
 }
-.search-module-button {
-  position: absolute;
-  top: .6em;
-  right: .6em;
-  width: 20px;
-  height: 20px;
-  background: transparent url("http://blog.hatena.ne.jp/images/theme/search.png") no-repeat right center;
+.search-module-button, .search-result-button {
+  top: .6em !important;
+  right: .6em !important;
+  width: 1.2em !important;
+  height: 1.2em !important;
+  background: transparent url("//data.rokuzeudon.com/blog/img/icn-search.svg") no-repeat right center !important;
   border: none;
   text-indent: -9999px;
   opacity: .5;
   &:hover {
     opacity: .3;
   }
-}
-.urllist-with-thumbnails li .urllist-image {
-  margin: 0 1em 0 0; //公式CSSの上書き用
-  width: 15em;
 }

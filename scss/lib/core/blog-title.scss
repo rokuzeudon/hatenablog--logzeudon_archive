@@ -4,15 +4,14 @@
     height: 60px;
     background-color: $bg-white;
   }
-  #blog-title-inner {
-    width: 45px;
-    height: 42px !important;
-    background-image: url("//data.rokuzeudon.com/portfolio/img/icn_logo.svg") !important;
-    background-size: 45px 42px;
-    margin: 10px auto 0;
-    overflow: hidden;
-  }
-  #blog-description {
-    display: none;
-  }
+}
+#blog-title-inner {
+  margin: 10px auto 0;
+  width: 45px;
+  height: 42px !important;
+  background: url("//data.rokuzeudon.com/portfolio/img/icn_logo.svg") 45px 42px !important;
+  overflow: hidden;
+}
+#blog-description {
+  display: none;
 }

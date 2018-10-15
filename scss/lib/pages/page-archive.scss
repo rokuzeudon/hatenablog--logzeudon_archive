@@ -1,61 +1,42 @@
-.page-archive {
-  .archive-header-category {
-    margin: 1em 1em 0;
+.archive-header-category {
+  margin: 0 1.2em;
+  width: 100%;
+  text-align: center;
+}
+.archive-entry {
+  position: relative;
+  width: calc(50% - 1em);
+  margin: 1em .5em 0;
+  padding: 1em;
+  box-sizing: border-box;
+  background: $bg-white;
+  border-radius: $radius-default;
+  @media #{$mq-xs} {
     width: 100%;
-    text-align: center;
   }
-  .archive-entry {
-    position: relative;
-    width: calc(50% - 3em);
-    margin: 1em .5em 0;
-    padding: 1em;
-    background: $bg-white;
-    @media #{$mq-xs} {
-      width: 100%;
+  &:hover {
+    .entry-title-link {
+      color: $color-primary;
     }
-    &:hover {
-      .entry-title-link {
-        color: $color-primary;
-      }
+  }
+  .categories {
+    a {
+      margin: .8em 0 0;
+      padding: .4em 1em;
+      background: $bg-gray-light;
+      border-radius: $radius-small;
     }
-    .date {
-      a {
-        font-size: .8em;
-      }
-    }
-    .categories {
-      a {
-        margin: .8em 0;
-        padding: .4em 1em;
-        font-size: .7em;
-        background: $bg-gray-light;
-        border-radius: .2em;
-      }
-    }
-    .entry-thumb-link {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      div.entry-thumb {
-        background-image: none !important; //公式CSSを上書き
-      }
-    }
-    .entry-description {
-      margin: 0;
-    }
-    .hatena-star-add-button {
-      display: none;
-    }
+  }
+  .entry-thumb-link, .entry-description, .hatena-star-add-button {
+    display: none;
   }
 }
 .search-result {
-  margin: 0 auto 3em;
+  margin: 0 auto 1em;
+  padding: 0 .5em;
   width: 100%;
-  max-width: 40em;
 }
 .search-result-form {
-  max-width: 40em;
+  max-width: 60em;
+  border-radius: $radius-default;
 }
