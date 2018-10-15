@@ -61,16 +61,24 @@
   margin: 0 0 2em;
   p {
     margin: 0 0 2em;
+    strong,b {
+      background: linear-gradient(transparent 60%, rgba(247, 222, 28, .5) 40%);
+    }
+    img {
+      vertical-align: top;
+    }
   }
-  ol,
-  ul {
+  ol, ul {
     margin: .7em 0 2em;
     padding: 0 0 0 1.4em;
     li {
       margin: 0 .5em .5em 0;
       line-height: 1.4;
-      li {
-        margin: 0 .5em .5em 0;
+      ul {
+        margin: .7em 0 1em;
+        li {
+          margin: 0 .5em .5em 0;
+        }
       }
     }
   }
@@ -98,14 +106,13 @@
     margin: 0 0 2em;
     border-collapse: collapse;
     border-spacing: 0;
-  }
-  table td,
-  table th {
-    padding: .4em .8em;
-    border: 1px solid $border-gray;
-  }
-  table th {
-    background: $bg-gray-light;
+    td, th {
+      padding: .4em .8em;
+      border: 1px solid $border-gray;
+    }
+    th {
+      background: $bg-gray-light;
+    }
   }
   dl {
     margin: 0 0 2em;
@@ -144,6 +151,87 @@
     }
     p {
       margin: 0;
+    }
+  }
+  pre {
+    margin: 0 0 1em;
+    padding: 1em;
+    border: 1px solid $border-gray;
+    white-space: pre;
+    &>.code {
+      margin: 0;
+      padding: 0;
+      white-space: pre;
+      border: 0;
+      background: transparent;
+      font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+    }
+    .code {
+      margin: 0 0 2em;
+      padding: 1em;
+      border: 1px solid $border-gray;
+      background-color: $bg-gray-light;
+      border-radius: .2em;
+      font-size: .9em;
+      font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+    }
+  }
+  hr {
+    margin: 2.2em 0 2em;
+    opacity: .4;
+  }
+  .embed-webcard {
+    margin: 0px 0 -.5em !important; // iframeと下部のテキストの感覚を狭く
+  }
+  cite a { // iframe下のテキストリンク
+    font-size: 90%;
+    color: $text-gray;
+  }
+  .table-of-contents { // 目次記法
+    margin: 2em 0 0;
+    padding: 1em;
+    background: $bg-gray-light;
+    border-radius: $radius-default;
+    &::before {
+      content: " --- 目次 --- ";
+      display: block;
+      margin: 0 0 1.5em;
+      padding: 0 0 1em;
+      border-bottom: 1px solid $border-gray;
+      text-align: center;
+    }
+    ul {
+      padding: 0;
+    }
+    li {
+      margin: 0 0 .5em 1em;
+    }
+    a {
+      color: $text-default;
+      &:hover { color: $color-primary }
+    }
+  }
+  .hatena-asin-detail, .itunes-embed { // アフィリエイト
+    padding: 1.6em;
+    border: none;
+    background: $bg-gray-light;
+    border-radius: $radius-small;
+  }
+  .hatena-asin-detail { // アフィリエイト_Amazon
+    position: relative;
+    line-height: 1.4;
+    a {
+      color: #e47911;
+      &:hover { color: #ff9900 }
+    }
+    &::before {
+      font: 36px/1 blogicon;
+      content: "\f034";
+      display: block;
+      position: absolute;
+      bottom: .3em;
+      right: .4em;
+      color: $text-gray-light;
     }
   }
 }
