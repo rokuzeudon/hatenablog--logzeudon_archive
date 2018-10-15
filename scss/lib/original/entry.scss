@@ -172,15 +172,7 @@
   }
 }
 .author-label {
-  display: inline-block;
-  position: relative;
-  min-width: 120px;
-  margin: 0 0 .5rem;
-  padding: .4rem .8rem;
-  border-radius: 1rem;
-  background: $bg-gray-light;
-  color: $text-default;
-  font-size: .9rem;
+  display: none;
 }
 .author-right {
   display: table-cell;
