@@ -214,3 +214,16 @@
   border: 1px solid $border-gray;
   background: $bg-gray-light;
 }
+
+/* lazyload */
+.lazyload {
+  opacity: 0;
+}
+.lazyloaded {
+  animation: lazyload_delay 1s ease-out;
+}
+@keyframes lazyload_delay {
+  0% { opacity: 0 }
+  50% { opacity: 0 }
+  100% {opacity: 1 }
+}
