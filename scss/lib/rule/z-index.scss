@@ -7,7 +7,7 @@
 .entry-header-menu { z-index: 997 }
 
 // 続きを読む
-.entry-see-more { z-index: 996 }
+.entry-see-more { z-index: 995 }
 
 // 詳細ページ
 .page-entry {
@@ -15,3 +15,6 @@
   .hatena-asin-detail > a, .hatena-asin-detail > div { z-index: 2 }
   .hatena-asin-detail::before { z-index: 1 }
 }
+
+// トップ 日付
+.page-index .entry-date { z-index: 996 }
