@@ -24,21 +24,39 @@
     }
   }
 }
-.urllist-item {
-  border-radius: $radius-default;
-  background-color: $bg-gray-light;
-  &:hover { background-color: $bg-white }
-}
-.urllist-item-inner {
-  position: relative;
-}
 .urllist-title-link {
   display: block;
   font-size: .96em;
 }
-.urllist-with-thumbnails li .urllist-image {
-  margin: 0 1em 0 0; //公式CSSの上書き用
-  width: 15em;
+.urllist-with-thumbnails li {
+  width: 100%;
+  .urllist-image {
+    margin: 0 1em 0 0; //公式CSSの上書き用
+    width: 15em;
+  }
+}
+.urllist-item {
+  overflow: hidden;
+  margin: 0 0 1em;
+  border-radius: $radius-default;
+  box-sizing: border-box;
+  background-color: $bg-gray-light;
+  .urllist-title-link {
+    padding: 1em 1em .5em;
+  }
+  .urllist-categories, .bookmark-widget-counter {
+    padding: 0 1em 1em;
+  }
+  .urllist-category-link {
+    margin: 0;
+    font-size: .8em;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+.urllist-item-inner {
+  position: relative;
 }
 .bookmark-widget-counter {
   position: absolute;

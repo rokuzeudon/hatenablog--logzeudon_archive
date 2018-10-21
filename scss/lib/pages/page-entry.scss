@@ -106,29 +106,8 @@
       font-weight: 500;
     }
     .urllist-item {
-      overflow: hidden;
-      margin: 0 0 1em;
       background: $bg-gray-light;
       border: 2px solid $bg-gray-light;
-      box-sizing: border-box;
-    }
-    .urllist-title-link {
-      padding: 1em 1em .5em;
-    }
-    .urllist-categories, .bookmark-widget-counter {
-      padding: 0 1em 1em;
-    }
-    .urllist-category-link {
-      display: inline-block;
-      margin: 0;
-      padding: .2em 1em .2em 0;
-      border-radius: .2em;
-      font-size: .8em;
-      color: $text-default;
-      background: $bg-gray-light;
-      &:hover {
-        color: $color-primary;
-      }
     }
   }
 
