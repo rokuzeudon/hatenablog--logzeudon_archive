@@ -35,10 +35,14 @@ npm実行中、出力した`style.css`が検証用ブログに反映されるよ
 blog.rokuzeudon.com/
 ┣┳ scss/
 ┃┗┳ lib/
+┃ ┗ about.scss
 ┃ ┗ style.scss
 ┗┳ build/
+ ┃ about.css
  ┗ style.css
 ```
+
+aboutページのためだけの記述が多かったので、ファイルを分けて出力し、aboutページ内にインラインで保存するようにしている。
 
 # ライセンス
 
