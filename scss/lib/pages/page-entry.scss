@@ -121,16 +121,7 @@
 
   // pager
   .pager-prev, .pager-next {
-    width: 49%;
-    &::before {
-      color: $text-gray;
-    }
-  }
-  .pager-prev::before {
-    content: "新しい記事へ";
-  }
-  .pager-next::before {
-    content: "前回の記事へ";
+    display: none;
   }
 }
 

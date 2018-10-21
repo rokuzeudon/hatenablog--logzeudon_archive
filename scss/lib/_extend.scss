@@ -24,3 +24,15 @@
     color: $text-link
   }
 }
+%btn-large {
+  display: inline-block;
+  padding: .8em 1.2em;
+  border-radius: $radius-small;
+  background: $bg-white;
+  border: 1px solid $border-default;
+  color: $text-default;
+  &:hover {
+    border: 1px solid $border-link;
+    color: $text-link
+  }
+}

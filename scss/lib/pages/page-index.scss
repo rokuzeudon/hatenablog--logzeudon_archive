@@ -1,5 +1,5 @@
-/* 日付を左上に固定 */
 .page-index, .page-category-category_name {
+  // 日付を左上に固定
   .entry-date {
     position: absolute;
     padding: .2em .5em;
@@ -24,6 +24,14 @@
     }
     .entry:hover .entry-date {
       opacity: 1;
+    }
+  }
+
+  // 次のページ
+  .pager {
+    margin: 2em auto 0;
+    a {
+      @extend %btn-large;
     }
   }
 }
