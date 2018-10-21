@@ -221,8 +221,8 @@
     position: relative;
     line-height: 1.4;
     a {
-      color: #e47911;
-      &:hover { color: #ff9900 }
+      color: $color-amazon-primary;
+      &:hover { color: $color-amazon-secondary }
     }
     &::before {
       font: 36px/1 blogicon;
