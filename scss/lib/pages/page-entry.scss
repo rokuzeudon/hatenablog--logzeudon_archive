@@ -69,6 +69,13 @@
         &:first-child {
           border-top: 1px solid $border-gray;
         }
+        &.read-more-comments {
+          padding-left: 0;
+          border: 0;
+          a {
+            @extend %btn-default;
+          }
+        }
       }
     }
     .hatena-id-icon {
@@ -79,9 +86,6 @@
       height: 50px !important;
       border-radius: 3px;
     }
-  }
-  .read-more-comments {
-    padding-left: 0;
   }
   .comment-user-name {
     margin: 0 0 1em 0;
