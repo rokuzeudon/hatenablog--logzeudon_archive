@@ -71,10 +71,18 @@
     img {
       vertical-align: top;
     }
+    a {
+      color: $text-link-blue;
+      &:hover { color: $text-link-blue-hover }
+    }
   }
   ol, ul {
     margin: .7em 0 2em;
     padding: 0 0 0 1.4em;
+    a {
+      color: $text-link-blue;
+      &:hover { color: $text-link-blue-hover }
+    }
     li {
       margin: 0 .5em .5em 0;
       line-height: 1.4;
