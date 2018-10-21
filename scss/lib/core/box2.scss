@@ -1,0 +1,115 @@
+#box2 {
+  max-width: 40em;
+  margin: 2em auto 0;
+  padding: 1.2em;
+}
+
+/* モジュール共通 */
+.hatena-module {
+  margin: 0 0 2em;
+}
+.hatena-module-title {
+  margin: 0 0 1.6em;
+  text-align: center;
+  background: linear-gradient(transparent 60%, rgba(247, 222, 28, .5) 40%);
+}
+.hatena-urllist {
+  padding: 0;
+  li {
+    margin: 0 0 1em;
+    line-height: 1.4;
+    a {
+      color: $text-default;
+      &:hover { color: $color-primary }
+    }
+  }
+}
+.urllist-title-link {
+  display: block;
+  font-size: .96em;
+}
+.urllist-with-thumbnails li {
+  width: 100%;
+  .urllist-image {
+    margin: 0 1em 0 0; //公式CSSの上書き用
+    width: 15em;
+  }
+}
+.urllist-item {
+  overflow: hidden;
+  margin: 0 0 1em;
+  border-radius: $radius-default;
+  box-sizing: border-box;
+  background-color: $bg-gray-light;
+  .urllist-title-link {
+    padding: 1em 1em .5em;
+  }
+  .urllist-categories, .bookmark-widget-counter {
+    padding: 0 1em 1em;
+  }
+  .urllist-category-link {
+    margin: 0;
+    font-size: .8em;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+.urllist-item-inner {
+  position: relative;
+}
+.bookmark-widget-counter {
+  position: absolute;
+  right: 0;
+  padding: 0 1em 1em;
+}
+
+/* カテゴリーモジュール */
+.hatena-module-category {
+  li {
+    display: inline-block;
+    margin: 0 .4em .8em 0;
+    a {
+      display: block;
+      margin: 0;
+      padding: .4em 1em;
+      border-radius: $radius-small;
+      color: $text-default;
+      background: $bg-gray-light;
+      &:hover {
+        color: $color-primary;
+        background: $bg-white;
+      }
+    }
+  }
+}
+
+/* 検索モジュール */
+.search-form, .search-result-form {
+  position: relative;
+  background: $bg-white;
+  border-radius: $radius-small;
+  border: none;
+}
+.search-module-input, .search-result-input {
+  width: calc(100% - 2.4em) !important;
+  height: 2.4em !important;
+  padding: .5em 1em !important;
+  box-sizing: border-box;
+  color: $text-default;
+  background: none;
+  border: none;
+}
+.search-module-button, .search-result-button {
+  top: .6em !important;
+  right: .6em !important;
+  width: 1.2em !important;
+  height: 1.2em !important;
+  background: transparent url("//data.rokuzeudon.com/blog/img/icn-search.svg") no-repeat right center !important;
+  border: none;
+  text-indent: -9999px;
+  opacity: .5;
+  &:hover {
+    opacity: .3;
+  }
+}

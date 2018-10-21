@@ -1,5 +1,7 @@
 // Theme color
 $color-primary: #f36777;
+$color-amazon-primary: #e47911;
+$color-amazon-secondary: #ff9900;
 
 // Background color
 $bg-gray: #eee;
@@ -11,15 +13,22 @@ $text-default: #454545;
 $text-gray: #999;
 $text-gray-light: #ccc;
 $text-white: #fff;
-$text-link: #1487bd;
-$text-link-hover: #0f5373;
+$text-link: #f36777;
+$text-link-hover: #ef3046;
+$text-link-blue: #1487bd;
+$text-link-blue-hover: #0f5373;
 
 // Border color
+$border-default: #bbb;
 $border-gray: #ddd;
+$border-link: #f36777;
+
+// Border radius
+$radius-default: .4em;
+$radius-small: .2em;
 
 // Media Queries
-$mq-xs: "(max-width: 480px)";
-$mq-sm: "(min-width: 768px)";
-$mq-md: "(min-width: 992px)";
-$mq-lg: "(min-width: 1200px)";
-$mq-xl: "(min-width: 1700px)";
+$mq-xs: "(max-width: 480px)"; // スマホ限定
+$mq-sm: "(min-width: 768px)"; // タブレット以上
+$mq-lg: "(min-width: 1200px)"; // PC大画面（文字サイズ拡大）
+$mq-xl: "(min-width: 1700px)"; // nav専用

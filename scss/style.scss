@@ -1,25 +1,33 @@
 @charset "utf-8";
 /*!
-  Theme: LOGzeudon
-  Author: @rokuzeudon
   Responsive: yes
-  Description:
-    Hatena-Blog-Theme-Boilerplate をベースに作成した、個人ブログ LOGzeudon blog.rokuzeudopn.com 用のはてなブログテーマです。
-  Released under the CC BY 2.1 JP License. creativecommons.org/licenses/by/2.1/jp/legalcode
-
-  Hatena-Blog-Theme-Boilerplate v2.1.0 | MIT License | github.com/hatena/Hatena-Blog-Theme-Boilerplate
 */
 
 // import normalize
 @import "node_modules/normalize.css/normalize";
 
-// import variable
+// import options
 @import "lib/_variable";
-@import "lib/_order";
+@import "lib/_extend";
+
+// import rule
+@import "lib/rule/flex-order";
+@import "lib/rule/z-index";
 
 // import core
-@import "lib/_core";
+@import "lib/core/_common";
+@import "lib/core/blog-title";
+@import "lib/core/breadcrumb";
+@import "lib/core/main";
+@import "lib/core/box2";
+
+// import original
+@import "lib/original/nav";
+@import "lib/original/entry";
+@import "lib/original/box2";
+@import "lib/original/footer";
 
 // import pages
-@import "lib/_page-archive";
-@import "lib/_page-entry";
+@import "lib/pages/page-index";
+@import "lib/pages/page-archive";
+@import "lib/pages/page-entry";

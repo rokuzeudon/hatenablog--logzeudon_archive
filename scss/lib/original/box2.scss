@@ -1,0 +1,16 @@
+/* ランキング */
+.hatena-module-entries-access-ranking .hatena-module-title {
+  width: 100%;
+  text-align: center;
+  background: none;
+  a {
+    @extend %btn-default;
+    letter-spacing: normal;
+    &::before {
+      font-family: "blogicon";
+      content: "\f00f";
+      margin: 0 .4em 0 0;
+      font-size: 1.1em;
+    }
+  }
+}

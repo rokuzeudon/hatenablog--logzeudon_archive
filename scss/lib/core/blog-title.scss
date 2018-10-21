@@ -1,0 +1,15 @@
+.header-image-only #blog-title {
+  padding: 1px;
+  height: 60px;
+  background-color: $bg-white;
+}
+#blog-title-inner {
+  margin: 10px auto 0;
+  width: 45px;
+  height: 42px !important;
+  background: url("//data.rokuzeudon.com/portfolio/img/icn_logo.svg") 45px 42px !important;
+  overflow: hidden;
+}
+#blog-description {
+  display: none;
+}

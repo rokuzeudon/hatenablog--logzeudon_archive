@@ -1,0 +1,43 @@
+.archive-header-category {
+  margin: 0 1.2em;
+  width: 100%;
+  text-align: center;
+}
+.archive-entry {
+  position: relative;
+  width: calc(50% - 1em);
+  margin: 1em .5em 0;
+  padding: 1em;
+  box-sizing: border-box;
+  background: $bg-white;
+  border-radius: $radius-default;
+  @media #{$mq-xs} {
+    width: 100%;
+  }
+  &:hover {
+    .entry-title-link {
+      color: $color-primary;
+    }
+  }
+  .categories {
+    display: block;
+    a {
+      margin: .4em 0;
+      padding: .2em .6em;
+      background: $bg-gray-light;
+      border-radius: $radius-small;
+    }
+  }
+  .entry-thumb-link, .entry-description, .hatena-star-add-button {
+    display: none;
+  }
+}
+.search-result {
+  margin: 0 auto 1em;
+  padding: 0 .5em;
+  width: 100%;
+}
+.search-result-form {
+  max-width: 60em;
+  border-radius: $radius-default;
+}

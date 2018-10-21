@@ -1,0 +1,19 @@
+.breadcrumb {
+  margin: 0;
+  padding: .4em 1.2em;
+  border-bottom: 1px solid $border-gray;
+  background: $bg-gray-light;
+  font-size: .8em;
+  text-align: center;
+  a {
+    color: $text-gray;
+    &:hover {
+      color: $text-default;
+    }
+  }
+}
+.breadcrumb-gt { // 矢印アイコン
+  display: inline-block;
+  margin: 0 .3em;
+  transform: scaleX(.8);
+}

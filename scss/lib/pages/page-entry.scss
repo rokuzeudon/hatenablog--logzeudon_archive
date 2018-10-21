@@ -1,0 +1,150 @@
+.page-entry {
+  #main-inner {
+    padding: 0;
+    max-width: none;
+  }
+  .entry {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: $bg-white;
+    &:hover .entry-title-link {
+      color: $text-default;
+    }
+  }
+  .entry-inner {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 1.2em;
+  }
+  .date {
+    pointer-events : none;
+  }
+  .entry-title {
+    font-size: 1.4em;
+  }
+  .categories {
+    display: block;
+    width: 100%;
+    a {
+      margin: .8em 0;
+      padding: .4em .6em;
+      color: $text-default;
+      background: $bg-gray-light;
+      border-radius: .2em;
+      &:hover {
+        background: $bg-gray;
+      }
+    }
+  }
+
+  // entry-content
+  .entry-content {
+    width: 100%;
+    border-bottom: 1px solid $border-gray;
+    line-height: 1.8;
+    @media #{$mq-lg} { line-height: 2.2 }
+  }
+
+  // entry-footer
+  .entry-footer {
+    display: block;
+    width: 100%;
+  }
+
+  // comment
+  .leave-comment-title {
+    @extend %btn-default;
+  }
+  .comment-box {
+    ul {
+      padding: 0;
+      font-size: .9em;
+      line-height: 1.6;
+      list-style: none;
+      li {
+        position: relative;
+        padding: 1em 1em 1em 4em;
+        border-bottom: 1px solid $border-gray;
+        &:first-child {
+          border-top: 1px solid $border-gray;
+        }
+        &.read-more-comments {
+          padding-left: 0;
+          border: 0;
+          a {
+            @extend %btn-default;
+          }
+        }
+      }
+    }
+    .hatena-id-icon {
+      position: absolute;
+      top: 1em;
+      left: 0;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 3px;
+    }
+  }
+  .comment-user-name {
+    margin: 0 0 1em 0;
+    font-weight: bold;
+  }
+  .comment-content {
+    margin: 0 0 1em 0;
+    word-wrap: break-word;
+    p {
+      margin: 0 0 1em 0;
+    }
+  }
+  .comment-metadata {
+    margin: 0;
+    color: $text-gray;
+    a {
+      color: $text-gray;
+    }
+  }
+
+  // related-entries
+  .hatena-module-related-entries {
+    .hatena-module-title {
+      margin: 3em 0 1.5em;
+      font-weight: 500;
+    }
+    .urllist-item {
+      background: $bg-gray-light;
+      border: 2px solid $bg-gray-light;
+    }
+  }
+
+  // pager
+  .pager-prev, .pager-next {
+    display: none;
+  }
+}
+
+// スマホではモジュールのサムネイル画像を表示しない
+@media #{$mq-xs} {
+  .urllist-with-thumbnails {
+    .urllist-image {
+      display: none;
+    }
+  }
+  .hatena-module-category .hatena-urllist li {
+    margin: .3em .1em;
+    padding: 0;
+    a {
+      padding: .2em .6em;
+      font-size: .9em;
+    }
+  }
+}
+
+// IEで親要素の端っこに墨溜まりみたいな表示になってしまう対策
+@media all and (-ms-high-contrast:none) {
+  .page-entry .entry-content p.mainimage .bg {
+    filter: blur(0);
+  }
+}

@@ -1,0 +1,37 @@
+.page-index, .page-category-category_name {
+  // 日付を左上に固定
+  .entry-date {
+    position: absolute;
+    padding: .2em .5em;
+    top: 14.4em;
+    left: 0;
+    letter-spacing: .01em;
+    font-weight: bold;
+    background: $color-primary;
+    transition: .6s ease-out;
+    a {
+      color: $text-white;
+    }
+  }
+  .entry:hover .entry-date {
+    left: 0;
+    transition: .2s ease-out;
+  }
+  @media #{$mq-sm} {
+    .entry-date {
+      left: -8em;
+      opacity: 0;
+    }
+    .entry:hover .entry-date {
+      opacity: 1;
+    }
+  }
+
+  // 次のページ
+  .pager {
+    margin: 2em auto 0;
+    a {
+      @extend %btn-large;
+    }
+  }
+}

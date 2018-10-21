@@ -1,0 +1,264 @@
+#main-inner {
+  margin: auto;
+  padding: 1.2em;
+  max-width: 60em;
+  word-wrap: break-word;
+}
+.entry {
+  position: relative;
+  overflow: hidden;
+  width: calc(50% - 1.6em);
+  margin: .7999em;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: $radius-default;
+  background: $bg-gray-light;
+  transition: .2s ease-out;
+  &:hover {
+    background: $bg-white;
+    .entry-title-link {
+      color: $color-primary;
+    }
+  }
+  @media #{$mq-xs} {
+    width: 100%;
+  }
+}
+.entry-header {
+  padding: 8em 0 0;
+  line-height: 1.4;
+}
+.entry-title {
+  width: 100%;
+  margin: .8em 0 .3em;
+  font-size: 1em;
+  font-weight: 600;
+}
+.date, .categories {
+  font-size: .8em;
+  a {
+    display: inline-block;
+    color: $text-gray;
+  }
+}
+.date {
+  margin: 0 .8em 0 0;
+}
+.categories {
+  display: none;
+}
+
+// 続きを読む
+.entry-see-more {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+// 記事本文
+.entry-content {
+  width: 28em;
+  margin: 0 0 2em;
+  p {
+    margin: 0 0 2em;
+    strong,b {
+      background: linear-gradient(transparent 60%, rgba(247, 222, 28, .5) 40%);
+    }
+    img {
+      vertical-align: top;
+    }
+    a {
+      color: $text-link-blue;
+      &:hover { color: $text-link-blue-hover }
+    }
+  }
+  ol, ul {
+    margin: .7em 0 2em;
+    padding: 0 0 0 1.4em;
+    a {
+      color: $text-link-blue;
+      &:hover { color: $text-link-blue-hover }
+    }
+    li {
+      margin: 0 .5em .5em 0;
+      line-height: 1.4;
+      ul {
+        margin: .7em 0 1em;
+        li {
+          margin: 0 .5em .5em 0;
+        }
+      }
+    }
+  }
+  h3, h4, h5 {
+    margin: 3em 0 1.5em;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 1.4em;
+    text-align: center;
+    color: $color-primary;
+  }
+  h4 {
+    padding: 0 0 0 1em;
+    font-size: 1.2em;
+    color: $color-primary;
+    border-left: 4px solid $color-primary;
+  }
+  h5 {
+    padding: 0 0 0 1em;
+    font-size: 1.1em;
+    border-left: 2px solid $color-primary;
+  }
+  table {
+    margin: 0 0 2em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    td, th {
+      padding: .4em .8em;
+      border: 1px solid $border-gray;
+    }
+    th {
+      background: $bg-gray-light;
+    }
+  }
+  dl {
+    margin: 0 0 2em;
+  }
+  dt {
+    margin: 0 0 1.2em;
+    border-bottom: 1px solid $border-gray;
+    font-weight: bold;
+  }
+  dd {
+    margin: .5em 0 1.2em;
+  }
+  blockquote {
+    margin: 0 0 1em;
+    padding: 1.6em;
+    background: $bg-gray-light;
+    &:before {
+      content: "“";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: serif;
+      font-size: 3em;
+      line-height: 1;
+      color: $text-gray-light;
+    }
+    &:after {
+      content: "”";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-family: serif;
+      font-size: 3em;
+      line-height: 0;
+      color: $text-gray-light;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  pre {
+    margin: 0 0 1em;
+    padding: 1em;
+    border: 1px solid $border-gray;
+    white-space: pre;
+    &>.code {
+      margin: 0;
+      padding: 0;
+      white-space: pre;
+      border: 0;
+      background: transparent;
+      font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+    }
+    .code {
+      margin: 0 0 2em;
+      padding: 1em;
+      border: 1px solid $border-gray;
+      background-color: $bg-gray-light;
+      border-radius: .2em;
+      font-size: .9em;
+      font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+    }
+  }
+  hr {
+    margin: 2.2em 0 2em;
+    opacity: .4;
+  }
+  .embed-webcard {
+    margin: 0px 0 -.5em !important; // iframeと下部のテキストの感覚を狭く
+  }
+  cite a { // iframe下のテキストリンク
+    font-size: 90%;
+    color: $text-gray;
+  }
+  .table-of-contents { // 目次記法
+    margin: 2em 0 0;
+    padding: 1em;
+    background: $bg-gray-light;
+    border-radius: $radius-default;
+    &::before {
+      content: " --- 目次 --- ";
+      display: block;
+      margin: 0 0 1.5em;
+      padding: 0 0 1em;
+      border-bottom: 1px solid $border-gray;
+      text-align: center;
+    }
+    ul {
+      padding: 0;
+    }
+    li {
+      margin: 0 0 .5em 1em;
+    }
+    a {
+      color: $text-default;
+      &:hover { color: $color-primary }
+    }
+  }
+  .hatena-asin-detail, .itunes-embed { // アフィリエイト
+    padding: 1.6em;
+    border: none;
+    background: $bg-gray-light;
+    border-radius: $radius-small;
+  }
+  .hatena-asin-detail { // アフィリエイト_Amazon
+    position: relative;
+    line-height: 1.4;
+    a {
+      color: $color-amazon-primary;
+      &:hover { color: $color-amazon-secondary }
+    }
+    &::before {
+      font: 36px/1 blogicon;
+      content: "\f034";
+      display: block;
+      position: absolute;
+      bottom: .3em;
+      right: .4em;
+      color: $text-gray-light;
+    }
+  }
+}
+
+// 記事フッターは一覧では非表示
+.entry-footer {
+  display: none;
+}
+
+// 管理者向け 編集ボタンの表示
+.entry-header-menu {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  a {
+    @extend %btn-small;
+  }
+}

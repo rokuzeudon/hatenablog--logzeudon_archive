@@ -1,0 +1,24 @@
+html {
+  font-family:-apple-system, BlinkMacSystemFont, YakuHanJP, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: $text-default;
+  background: $bg-gray;
+}
+@media #{$mq-lg} {
+  body { font-size: 120% }
+}
+a {
+  text-decoration: none;
+  color: $text-link;
+  &:hover { color: $text-link-hover }
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: $text-default
+}
+
+// selected text
+::-moz-selection, ::selection {
+  background: $bg-gray-light;
+  color: $color-primary;
+}

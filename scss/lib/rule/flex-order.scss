@@ -1,0 +1,34 @@
+// flex
+#main-inner,
+.archive-entries,
+.entries-access-ranking,
+.entry-header,
+.entry-inner,
+.sns-area,
+.hatena-module-entries-access-ranking {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+// .entry-header
+.date { order: 2 }
+.entry-title { order: 1 }
+.categories { order: 3 }
+.customized-header { order: 4 }
+
+// .entry-inner
+.entry-header { order: 2 }
+.entry-content { order: 1 }
+.entry-footer { order: 3 }
+
+.page-entry {
+  .entry-header { order: 1 }
+  .entry-content { order: 2 }
+}
+
+// ランキングモジュール
+.hatena-module-entries-access-ranking {
+  .hatena-module-title { order: 2 }
+  .hatena-module-body { order: 1 }
+}

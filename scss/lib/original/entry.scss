@@ -1,0 +1,231 @@
+/* メインビジュアル */
+.mainimage { // 一覧での表示
+  img {
+    position: absolute;
+    width: auto;
+    max-width: none !important;
+    height: 13em;
+    top: 6.4em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.page-entry { // 詳細での表示
+  .entry-header {
+    padding: 22em 0 0;
+  }
+  .mainimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20em;
+    overflow: hidden;
+    background: $bg-gray;
+    img {
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: auto;
+      transform: translateY(-50%);
+      &.mv { // 古い記事には適応させない
+        width: 35em;
+        border-radius: .8rem;
+        box-shadow: 1em 1em 3em .2em rgba(0, 0, 0, 0.2);
+      }
+    }
+    .bg {
+      display: block;
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      background-position: 50% 50% !important;
+      background-size: cover !important;
+      filter: blur(.2em);
+      opacity: .9;
+    }
+  }
+  p.mainimage { // 一部の古い記事用
+    background-position: center !important;
+    background-size: cover !important;
+  }
+}
+@media #{$mq-xs} { // スマホ表示の調整
+  .page-entry {
+    .entry-header {
+      padding: 14em 0 0;
+    }
+    .mainimage {
+      height: 14em;
+      border-top: 4px solid $bg-gray-light;
+      border-bottom: 4px solid $bg-gray-light;
+      img {
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        &.mv { width: auto }
+      }
+      .bg { display: none }
+    }
+  }
+}
+
+/* シェアボタン */
+.share {
+  position: relative;
+  padding: 0;
+  @media #{$mq-sm} {
+    position: fixed;
+    top: 8em;
+    left: 1em;
+  }
+  &::after { // スマホ用画像
+    content: '';
+    margin: .5em;
+    width: 2.6em;
+    height: 1.6em;
+    background: url("//data.rokuzeudon.com/blog/img/icn-share-sp.svg") top/contain no-repeat;
+    display: inline-block;
+    @media #{$mq-sm} { display: none }
+  }
+  &::before { // PC用画像
+    content: '';
+    margin: .3em auto;
+    width: 40px;
+    height: 10px;
+    background: url("//data.rokuzeudon.com/blog/img/icn-share.svg") top/contain no-repeat;
+    display: none;
+    @media #{$mq-sm} { display: block }
+  }
+  li { // スマホでは横並び、PCでは縦並び＆LINEボタン非表示
+    display: inline-block;
+    @media #{$mq-sm} {
+      display: block;
+      &.line {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 枠線付き画像 */
+.border img {
+  border: 4px solid $border-gray;
+  box-sizing: border-box ;
+}
+
+/* 独自ボタン */
+.link {
+  margin: 1.4em auto 2.5em;
+  text-align: center;
+  a {
+    display: inline-block;
+    padding: 0 2em;
+    border-radius: 2em;
+    color: $text-gray;
+    background: $bg-gray;
+    &:hover {
+      color: $color-primary;
+      background: $bg-gray-light;
+    }
+  }
+}
+
+/* この記事を書いた人 */
+.author-box {
+  margin: 0 0 2em;
+  border: 2px solid $border-gray;
+  border-radius: $radius-default;
+}
+.author-left {
+  display: table-cell;
+  width: 12em;
+  padding: 2em 1em;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 2px $border-gray dashed;
+  dl {
+    margin: .5em 1em 0;
+    font-weight: bold;
+  }
+  dd {
+    margin: .5em 0 0;
+    font-size: .8em;
+  }
+}
+.author-right {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 1em 1.4em .5em;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background: $bg-gray-light;
+  p {
+    margin: 0 0 1em;
+  }
+  a {
+    @extend %btn-small;
+    line-height: 1.2;
+  }
+  .twitter::before, .hatenablog::before, .portfolio::before {
+    display: inline-block;
+    font: 1.2em/1 blogicon;
+    vertical-align: bottom;
+    margin: 0 .4em 0 0;
+  }
+  .twitter::before {
+    content: "\f035";
+  }
+  .hatenablog::before {
+    content: "\f000";
+  }
+  .portfolio::before {
+    content: "\f03e";
+  }
+}
+@media #{$mq-xs} { // スマホでは縦並びに
+  .author-left, .author-right {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+  .author-left {
+    padding: 1.5rem 1rem;
+  }
+  .author-right {
+    padding: 1rem;
+    background: $bg-gray-light;
+  }
+}
+.author-label {
+  display: none;
+}
+
+/* この記事のURLとタイトルをコピーする */
+.copy_btn {
+  margin: 0 0 1.2em;
+  @extend %btn-small;
+}
+.copied {
+  color: $text-gray;
+  border: 1px solid $border-gray;
+  background: $bg-gray-light;
+}
+
+/* lazyload */
+.lazyload {
+  opacity: 0;
+}
+.lazyloaded {
+  animation: lazyload_delay 1s ease-out;
+}
+@keyframes lazyload_delay {
+  0% { opacity: 0 }
+  50% { opacity: 0 }
+  100% {opacity: 1 }
+}
