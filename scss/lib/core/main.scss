@@ -257,7 +257,7 @@
 .entry-header-menu {
   position: absolute;
   top: 1em;
-  left: 1em;
+  right: 1em;
   a {
     @extend %btn-small;
   }
