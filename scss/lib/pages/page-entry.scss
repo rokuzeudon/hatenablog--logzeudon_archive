@@ -28,10 +28,13 @@
     width: 100%;
     a {
       margin: .8em 0;
-      padding: .4em 1em;
+      padding: .4em .6em;
       color: $text-default;
-      background: $bg-gray;
+      background: $bg-gray-light;
       border-radius: .2em;
+      &:hover {
+        background: $bg-gray;
+      }
     }
   }
 
