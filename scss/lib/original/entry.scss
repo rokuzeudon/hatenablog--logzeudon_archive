@@ -163,12 +163,14 @@
   vertical-align: middle;
   padding: 1em 1.4em .5em;
   box-sizing: border-box;
+  line-height: 1.6;
   background: $bg-gray-light;
   p {
     margin: 0 0 1em;
   }
   a {
     @extend %btn-small;
+    line-height: 1.2;
   }
   .twitter::before, .hatenablog::before, .portfolio::before {
     display: inline-block;
