@@ -4,7 +4,8 @@
 .entries-access-ranking,
 .entry-header,
 .entry-inner,
-.sns-area {
+.sns-area,
+.hatena-module-entries-access-ranking {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -24,4 +25,10 @@
 .page-entry {
   .entry-header { order: 1 }
   .entry-content { order: 2 }
+}
+
+// ランキングモジュール
+.hatena-module-entries-access-ranking {
+  .hatena-module-title { order: 2 }
+  .hatena-module-body { order: 1 }
 }

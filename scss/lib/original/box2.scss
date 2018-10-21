@@ -1,0 +1,9 @@
+/* ランキング */
+.hatena-module-entries-access-ranking .hatena-module-title {
+  width: 100%;
+  text-align: center;
+  background: none;
+  a {
+    @extend %btn-default;
+  }
+}
