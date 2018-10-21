@@ -1,0 +1,53 @@
+<footer id="footer">
+  <p class="logo"><a href="/"><img src="//data.rokuzeudon.com/portfolio/img/icn_logo_ol.svg" alt="LOGzeudon"></a></p>
+  <p><a href="/about">このブログについて</a>｜<a href="/about#privacy">プライバシーポリシー</a></p>
+  <p>©︎Rokuzeudon 2018</p>
+</footer>
+
+<!--JQuery-->
+<script type="text/javascript" src="//data.rokuzeudon.com/blog/js/jquery-2.2.4.min.js"></script>
+
+<!--カテゴリ内特定の文字列の除去-->
+<script>
+$(function(){
+  $('.breadcrumb, .categories, .urllist-categories, .hatena-module').each(function(){
+    var txt = $(this).html();
+    $(this).html(txt.replace(/\/archive/g,""));
+  });
+});
+</script>
+
+<!--navの開閉-->
+<script>
+$('#nav-toggle').click(function(){
+  $('body').toggleClass('open');
+  $('.menuButton').attr({
+    'aria-expanded' : 'true',
+    'aria-hidden'   : 'false'
+  });
+});
+</script>
+
+<!--関連記事の位置変更-->
+<script>
+$(function(){
+  $(window).on("DOMContentLoaded", function(){
+    $('.hatena-module-related-entries').insertAfter('.comment-box');
+  });
+});
+</script>
+
+<!--この記事のURLとタイトルをコピーする-->
+<script src="//cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
+<script>
+var clipboard = new Clipboard('.copy_btn');
+$(function(){
+  $('.copy_btn').click(function(){
+    $(this).addClass('copied');
+    $(this).text('コピーしました');
+  });
+});
+</script>
+
+<!--画像クリックで拡大しないように-->
+<script src="//niyari.github.io/hatenablog-modules/disable-cbox.js" charset="utf-8" defer></script>
