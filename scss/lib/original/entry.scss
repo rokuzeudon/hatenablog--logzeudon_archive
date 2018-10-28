@@ -229,3 +229,8 @@
   50% { opacity: 0 }
   100% {opacity: 1 }
 }
+
+/* 前後記事ページャーを非表示 */
+.page-entry .pager {
+  display: none;
+}
