@@ -28,7 +28,7 @@
     display: block;
     width: 100%;
     a {
-      margin: .8em 0;
+      margin: .8em 0 0;
       padding: .4em .6em;
       color: $text-default;
       background: $bg-gray-light;
@@ -51,6 +51,11 @@
   .entry-footer {
     display: block;
     width: 100%;
+  }
+
+  // social-buttons
+  .social-buttons {
+    margin: 0 0 .4em;
   }
 
   // comment
