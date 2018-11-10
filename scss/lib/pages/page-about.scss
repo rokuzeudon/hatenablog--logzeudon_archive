@@ -1,7 +1,7 @@
 .page-about {
   #main-inner {
     max-width: 100%;
-    padding: 0
+    padding: 0;
   }
   .entry {
     margin: 0 0 2em;
@@ -10,7 +10,7 @@
     max-width: 100%;
     border-radius: 0;
     &:hover {
-      background: #f8f8f8
+      background: #f8f8f8;
     }
   }
   .entry-inner {
@@ -23,7 +23,7 @@
     width: 100%;
     line-height: 1.8;
     letter-spacing: .02em;
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
   }
   dl {
     order: 3
