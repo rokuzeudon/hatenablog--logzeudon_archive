@@ -42,6 +42,27 @@
     border-radius: .3em;
     background: $bg-white;
   }
+  .btn {
+    @extend %btn-small;
+  }
+  .twitter::before, .hatenablog::before, .portfolio::before, .feedly::before, {
+    display: inline-block;
+    font: 1.2em/1 blogicon;
+    vertical-align: text-bottom;
+    margin: 0 .4em 0 0;
+  }
+  .twitter::before {
+    content: "\f035";
+  }
+  .hatenablog::before {
+    content: "\f000";
+  }
+  .portfolio::before {
+    content: "\f03e";
+  }
+  .feedly::before {
+    content: "\f04e";
+  }
 
   // profile
   p.icn {

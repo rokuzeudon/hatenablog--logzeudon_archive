@@ -173,7 +173,7 @@
     @extend %btn-small;
     line-height: 1.2;
   }
-  .twitter::before, .hatenablog::before, .portfolio::before {
+  .twitter::before, .hatenablog::before {
     display: inline-block;
     font: 1.2em/1 blogicon;
     vertical-align: bottom;
@@ -184,9 +184,6 @@
   }
   .hatenablog::before {
     content: "\f000";
-  }
-  .portfolio::before {
-    content: "\f03e";
   }
 }
 @media #{$mq-xs} { // スマホでは縦並びに
