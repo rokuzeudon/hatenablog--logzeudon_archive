@@ -1,4 +1,6 @@
 .page-about {
+
+  // base
   #main-inner {
     max-width: 100%;
     padding: 0;
@@ -16,7 +18,7 @@
   .entry-inner {
     max-width: 40em;
     margin: 0 auto;
-    padding: 1em
+    padding: 2em 1em 1em;
   }
   .entry-content {
     order: 2;
@@ -25,8 +27,20 @@
     letter-spacing: .02em;
     border-bottom: 1px solid #ddd;
   }
-  dl {
-    order: 3
+  h3 {
+    margin: 0 0 .5em;
+  }
+  h4 {
+    margin: 1em 0;
+  }
+
+  // original layout
+  .about-box, dl {
+    margin-bottom: 2em;
+    padding: 2em 2em 0.1em;
+    background: #eee;
+    border-radius: .3em;
+    background: $bg-white;
   }
 
   // profile
@@ -88,19 +102,19 @@
   }
 
   // privacy_policy
-  #privacy {
-    margin-bottom: 2em;
-    padding: 2em 2em 0.1em;
-    background: #eee;
-    border-radius: .3em;
+  #privacy.about-box {
+    background: $bg-gray;
     h3 {
-      margin: 0 0 .5em;
-      color: #454545;
+      color: $text-default;
     }
     h4 {
-      margin: 1em 0;
-      color: #454545;
-      border-left: 4px solid #454545;
+      color: $text-default;
+      border-left: 4px solid $text-default;
     }
+  }
+
+  // info dl
+  dl {
+    order: 3;
   }
 }
