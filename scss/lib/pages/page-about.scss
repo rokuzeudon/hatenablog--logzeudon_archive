@@ -1,0 +1,106 @@
+.page-about {
+  #main-inner {
+    max-width: 100%;
+    padding: 0
+  }
+  .entry {
+    margin: 0 0 2em;
+    padding: 0 0 2em;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    &:hover {
+      background: #f8f8f8
+    }
+  }
+  .entry-inner {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 1em
+  }
+  .entry-content {
+    order: 2;
+    width: 100%;
+    line-height: 1.8;
+    letter-spacing: .02em;
+    border-bottom: 1px solid #ddd
+  }
+  dl {
+    order: 3
+  }
+
+  // profile
+  p.icn {
+    text-align: center;
+    img {
+      display: block;
+      margin: auto;
+      border: none;
+    }
+  }
+
+  // follow
+  .follow-btn {
+    text-align: center;
+    a {
+      display: inline-block;
+      margin: 0;
+      padding: 1em 0;
+      box-sizing: border-box;
+      width: 30%;
+      line-height: 28px;
+      text-decoration: none;
+      border-radius: 10px;
+      background: #fff;
+    }
+    .hatena {
+      color: #3D3F44;
+      &:hover {
+        color: #ffffff;
+        background: #3D3F44;
+      }
+    }
+    .twitter {
+      margin: 0 3%;
+      color: #00ACEE;
+      &:hover {
+        color: #ffffff;
+        background: #00ACEE;
+      }
+    }
+    .feedly {
+      color: #70CA3B;
+      &:hover {
+        color: #ffffff;
+        background: #70CA3B;
+      }
+    }
+  }
+
+  // link
+  .link {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+  }
+  .hatena-citation {
+    margin: 10px 0 30px;
+  }
+
+  // privacy_policy
+  #privacy {
+    margin-bottom: 2em;
+    padding: 2em 2em 0.1em;
+    background: #eee;
+    border-radius: .3em;
+    h3 {
+      margin: 0 0 .5em;
+      color: #454545;
+    }
+    h4 {
+      margin: 1em 0;
+      color: #454545;
+      border-left: 4px solid #454545;
+    }
+  }
+}
