@@ -33,7 +33,7 @@
     font-size: 1.8em;
   }
   h4 {
-    margin: 1.4em 0;
+    margin: 2em 0 1.4em;
   }
   p {
     margin: 0 0 1em;
@@ -70,15 +70,7 @@
   }
 
   // profile
-  .aboutme-icon {
-    margin: -1em 0 1em;
-    text-align: center;
-    img {
-      display: block;
-      margin: auto;
-      border: none;
-    }
-  }
+  .aboutme-icon img { display: block }
 
   // privacy_policy
   #privacy.about-box {
