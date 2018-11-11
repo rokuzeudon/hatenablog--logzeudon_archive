@@ -7,13 +7,15 @@
   text-align: center;
   white-space: nowrap;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   a {
     color: $text-gray;
     &:hover {
       color: $text-default;
     }
   }
+}
+.breadcrumb-child:last-child {
+  margin: 0 1.2em 0 0;
 }
 .breadcrumb-gt { // 矢印アイコン
   display: inline-block;
