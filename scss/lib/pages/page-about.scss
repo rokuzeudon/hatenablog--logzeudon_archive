@@ -6,19 +6,20 @@
     padding: 0;
   }
   .entry {
-    margin: 0 0 2em;
-    padding: 0 0 2em;
+    margin: 0;
+    padding: 0;
     width: 100%;
     max-width: 100%;
     border-radius: 0;
+    background: $bg-gray;
     &:hover {
-      background: #f8f8f8;
+      background: $bg-gray;
     }
   }
   .entry-inner {
     max-width: 40em;
     margin: 0 auto;
-    padding: 2em 1em 1em;
+    padding: 2em 1em 0;
   }
   .entry-content {
     order: 2;
@@ -42,7 +43,6 @@
   .about-box, dl {
     margin-bottom: 2em;
     padding: 2em 2em 1em;
-    background: #eee;
     border-radius: .3em;
     background: $bg-white;
   }
@@ -82,7 +82,7 @@
 
   // privacy_policy
   #privacy.about-box {
-    background: $bg-gray;
+    background: $bg-gray-light;
     h3 {
       color: $text-default;
     }
