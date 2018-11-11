@@ -7,10 +7,7 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "npm-run-all -p watch server",
-    "build": "npm-run-all scss autoprefixer scss-about autoprefixer-about",
-
-    "scss-about": "node-sass scss/about.scss build/about.css --output-style compressed",
-    "autoprefixer-about": "postcss --use autoprefixer -r build/about.css --map false",
+    "build": "npm-run-all scss autoprefixer",
 
     "scss": "node-sass scss/style.scss build/style.css --output-style compressed",
     "autoprefixer": "postcss --use autoprefixer -r build/style.css --map false",

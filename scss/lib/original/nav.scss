@@ -17,6 +17,10 @@
   @media #{$mq-sm} {
     width: 6em;
     height: 6em;
+    bottom: auto;
+    right: auto;
+    top: 0;
+    left: 0;
     margin: -1em;
   }
 }
@@ -68,7 +72,7 @@
   }
   .logo {
     position: absolute;
-    top: 6.5px;
+    bottom: 6.5px;
     width: 100%;
     a {
       margin: 0 auto;
@@ -87,7 +91,7 @@
   }
   ul {
     display: table-cell;
-    padding: 2em 0 0;
+    padding: 0 0 2em;
     vertical-align: middle;
     list-style: none;
     li {
@@ -96,6 +100,17 @@
       @media #{$mq-lg} {
         margin: 0 0 1em;
       }
+    }
+  }
+}
+@media #{$mq-sm} {
+  #global-nav {
+    .logo {
+      top: 6.5px;
+      bottom: auto;
+    }
+    ul {
+      padding: 2em 0 0;
     }
   }
 }
@@ -134,10 +149,11 @@
   @media #{$mq-sm} {
     width: 4000px;
     height: 4000px;
-    margin-right: -2000px;
-    margin-bottom: -2000px;
-    bottom: 35px;
-    right: 35px;
+    margin: -2000px 0 0 -2000px;
+    bottom: auto;
+    right: auto;
+    top: 35px;
+    left: 35px;
   }
 }
 .open #nav-bg { // 開いた時
@@ -148,15 +164,15 @@
   #nav-bg {
     width: 100%;
     height: 100%;
-    margin: 0 0 -100%;
-    bottom: 0;
-    right: 0;
+    margin: -100% 0 0;
+    top: 0;
+    left: 0;
     border-radius: 0;
     transform: scale(1);
     opacity: 0;
   }
   .open #nav-bg {
-    margin-bottom: 0;
+    margin-top: 0;
     opacity: 1;
   }
 }

@@ -1,0 +1,97 @@
+.page-about {
+
+  // base
+  #main-inner {
+    max-width: 100%;
+    padding: 0;
+  }
+  .entry {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    background: $bg-gray;
+    &:hover {
+      background: $bg-gray;
+    }
+  }
+  .entry-inner {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 2em 1em 0;
+  }
+  .entry-content {
+    order: 2;
+    width: 100%;
+    margin: 0;
+    line-height: 1.8;
+    letter-spacing: .02em;
+  }
+  h3 {
+    margin: 0 0 1em;
+    font-size: 1.8em;
+  }
+  h4 {
+    margin: 2em 0 1.4em;
+  }
+  p {
+    margin: 0 0 1em;
+  }
+
+  // original layout
+  .about-box, dl {
+    margin-bottom: 2em;
+    padding: 2em 2em 1em;
+    border-radius: .3em;
+    background: $bg-white;
+  }
+  .btn {
+    @extend %btn-small;
+    line-height: 1.2;
+  }
+  .twitter::before, .hatenablog::before, .portfolio::before, .feedly::before, {
+    display: inline-block;
+    font: 1.2em/1 blogicon;
+    vertical-align: text-bottom;
+    margin: 0 .4em 0 0;
+  }
+  .twitter::before {
+    content: "\f035";
+  }
+  .hatenablog::before {
+    content: "\f000";
+  }
+  .portfolio::before {
+    content: "\f03e";
+  }
+  .feedly::before {
+    content: "\f04e";
+  }
+
+  // profile
+  .aboutme-icon img { display: block }
+
+  // privacy_policy
+  #privacy.about-box {
+    background: $bg-gray-light;
+    h3 {
+      color: $text-default;
+    }
+    h4 {
+      color: $text-default;
+      border-left: 4px solid $text-default;
+    }
+  }
+
+  // info dl
+  dl {
+    order: 3;
+  }
+  dt {
+    margin: 0 0 .2em;
+  }
+  dd {
+    margin: .5em 0;
+  }
+}
