@@ -23,27 +23,32 @@
   .entry-content {
     order: 2;
     width: 100%;
+    margin: 0;
     line-height: 1.8;
     letter-spacing: .02em;
-    border-bottom: 1px solid #ddd;
   }
   h3 {
-    margin: 0 0 .5em;
+    margin: 0 0 1em;
+    font-size: 1.8em;
   }
   h4 {
-    margin: 1em 0;
+    margin: 1.4em 0;
+  }
+  p {
+    margin: 0 0 1em;
   }
 
   // original layout
   .about-box, dl {
     margin-bottom: 2em;
-    padding: 2em 2em 0.1em;
+    padding: 2em 2em 1em;
     background: #eee;
     border-radius: .3em;
     background: $bg-white;
   }
   .btn {
     @extend %btn-small;
+    line-height: 1.2;
   }
   .twitter::before, .hatenablog::before, .portfolio::before, .feedly::before, {
     display: inline-block;
@@ -65,61 +70,14 @@
   }
 
   // profile
-  p.icn {
+  .aboutme-icon {
+    margin: -1em 0 1em;
     text-align: center;
     img {
       display: block;
       margin: auto;
       border: none;
     }
-  }
-
-  // follow
-  .follow-btn {
-    text-align: center;
-    a {
-      display: inline-block;
-      margin: 0;
-      padding: 1em 0;
-      box-sizing: border-box;
-      width: 30%;
-      line-height: 28px;
-      text-decoration: none;
-      border-radius: 10px;
-      background: #fff;
-    }
-    .hatena {
-      color: #3D3F44;
-      &:hover {
-        color: #ffffff;
-        background: #3D3F44;
-      }
-    }
-    .twitter {
-      margin: 0 3%;
-      color: #00ACEE;
-      &:hover {
-        color: #ffffff;
-        background: #00ACEE;
-      }
-    }
-    .feedly {
-      color: #70CA3B;
-      &:hover {
-        color: #ffffff;
-        background: #70CA3B;
-      }
-    }
-  }
-
-  // link
-  .link {
-    margin: 0 auto;
-    max-width: 500px;
-    text-align: center;
-  }
-  .hatena-citation {
-    margin: 10px 0 30px;
   }
 
   // privacy_policy
@@ -137,5 +95,11 @@
   // info dl
   dl {
     order: 3;
+  }
+  dt {
+    margin: 0 0 .2em;
+  }
+  dd {
+    margin: .5em 0;
   }
 }
