@@ -12,6 +12,7 @@
 }
 .page-entry { // 詳細での表示
   .entry-header {
+    margin: 0 auto 2em;
     padding: 20em 0 0;
   }
   .mainimage {
@@ -56,7 +57,6 @@
 @media #{$mq-xs} { // スマホ表示の調整
   .page-entry {
     .entry-header {
-      margin: 0 auto 2em;
       padding: 14em 0 0;
     }
     .mainimage {
